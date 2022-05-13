@@ -10,4 +10,24 @@ mixin NavigatorManager {
       ),
     );
   }
+
+  void navigateAndRemoveToWidget(BuildContext context, Widget widget) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => widget,
+        fullscreenDialog: true,
+        settings: const RouteSettings(),
+      ),
+    );
+  }
+
+  // void navigateToBack(BuildContext context, Widget widget) {
+  //   Navigator.of(context).push(
+  //     MaterialPageRoute(
+  //       builder: (context) => widget,
+  //       fullscreenDialog: true,
+  //       // settings: const RouteSettings(),
+  //     ),
+  //   );
+  // }
 }

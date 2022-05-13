@@ -1,6 +1,8 @@
 import 'package:dabasirs_wallet/core/manager/navigation_manager.dart';
 import 'package:flutter/material.dart';
 
+import '../../../product/model/input_model.dart';
+import '../../home/view/home_vieww.dart';
 import '../../home/view_model/home_view_model.dart';
 
 class AddInputView extends StatelessWidget with NavigatorManager {
@@ -45,12 +47,16 @@ class AddInputView extends StatelessWidget with NavigatorManager {
             const Spacer(),
             ElevatedButton(
               onPressed: () {
-                // print(titleController.text);
-                // var newModel = InputModel(
-                //     titleController.text, categoryController.text, priceController.text, DateTime.now());
-                // _model.addDummyList(newModel);
-                // print(_model.dummyList.length);
-                // navigateToWidget(context, HomeView());
+                print(titleController.text);
+                var newModel = InputModel(
+                    title: titleController.text,
+                    category: categoryController.text,
+                    price: int.parse(priceController.text),
+                    createdTime: DateTime.now());
+                _model.addInputList(newModel);
+                print(_model.inputList.length);
+                print(_model.inputList[0].title);
+                navigateAndRemoveToWidget(context, HomeVieww());
               },
               child: const Text('Save'),
             )
