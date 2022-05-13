@@ -1,4 +1,4 @@
-import 'package:dabasirs_wallet/product/model/deneme_model.dart';
+import 'package:date_format/date_format.dart';
 import 'package:mobx/mobx.dart';
 import '../../../product/model/input_model.dart';
 
@@ -7,22 +7,40 @@ part 'home_view_model.g.dart';
 class HomeViewModel = _HomeViewModelBase with _$HomeViewModel;
 
 abstract class _HomeViewModelBase with Store {
+  List months = [
+    'Ocak',
+    'Şubat',
+    'Mart',
+    'Nisan',
+    'Mayıs',
+    'Haziran',
+    'Temmuz',
+    'Ağustos',
+    'Eylül',
+    'Ekim',
+    'Kasım',
+    'Aralık'
+  ];
+
   @observable
-  ObservableList<InputModel> dummyList = ObservableList<InputModel>();
+  ObservableList<InputModel> inputList = ObservableList<InputModel>();
 
   @action
-  void addDummyList(InputModel inputModel) {
-    dummyList.add(inputModel);
+  void dummyVoid() {
+    print('dummyVoid');
   }
 
-  // @observable
-  // ObservableList<DenemeModel> denemeList = ObservableList<DenemeModel>();
-  @observable
-  ObservableList<DenemeModel> denemeList =
-      ObservableList.of([DenemeModel(title: "title")]);
+  @action
+  void addInputList(InputModel inputModel) {
+    inputList.add(inputModel);
+  }
 
   @action
-  void addDenemeList(DenemeModel denemeModel) {
-    denemeList.add(denemeModel);
+  void returnThisMonth() {
+    var month = DateTime.now();
+    final formatted = formatDate(month, [mm]); // Current month index
+
+    print(months[int.parse(formatted) - 1]); // Current month name
+    print(formatDate(DateTime.now(), [dd, '-', mm, '-', yyyy])); // Current date
   }
 }

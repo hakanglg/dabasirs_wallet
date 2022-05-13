@@ -9,35 +9,19 @@ part of 'home_view_model.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HomeViewModel on _HomeViewModelBase, Store {
-  late final _$dummyListAtom =
-      Atom(name: '_HomeViewModelBase.dummyList', context: context);
+  late final _$inputListAtom =
+      Atom(name: '_HomeViewModelBase.inputList', context: context);
 
   @override
-  ObservableList<InputModel> get dummyList {
-    _$dummyListAtom.reportRead();
-    return super.dummyList;
+  ObservableList<InputModel> get inputList {
+    _$inputListAtom.reportRead();
+    return super.inputList;
   }
 
   @override
-  set dummyList(ObservableList<InputModel> value) {
-    _$dummyListAtom.reportWrite(value, super.dummyList, () {
-      super.dummyList = value;
-    });
-  }
-
-  late final _$denemeListAtom =
-      Atom(name: '_HomeViewModelBase.denemeList', context: context);
-
-  @override
-  ObservableList<DenemeModel> get denemeList {
-    _$denemeListAtom.reportRead();
-    return super.denemeList;
-  }
-
-  @override
-  set denemeList(ObservableList<DenemeModel> value) {
-    _$denemeListAtom.reportWrite(value, super.denemeList, () {
-      super.denemeList = value;
+  set inputList(ObservableList<InputModel> value) {
+    _$inputListAtom.reportWrite(value, super.inputList, () {
+      super.inputList = value;
     });
   }
 
@@ -45,22 +29,33 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       ActionController(name: '_HomeViewModelBase', context: context);
 
   @override
-  void addDummyList(InputModel inputModel) {
+  void dummyVoid() {
     final _$actionInfo = _$_HomeViewModelBaseActionController.startAction(
-        name: '_HomeViewModelBase.addDummyList');
+        name: '_HomeViewModelBase.dummyVoid');
     try {
-      return super.addDummyList(inputModel);
+      return super.dummyVoid();
     } finally {
       _$_HomeViewModelBaseActionController.endAction(_$actionInfo);
     }
   }
 
   @override
-  void addDenemeList(DenemeModel denemeModel) {
+  void addInputList(InputModel inputModel) {
     final _$actionInfo = _$_HomeViewModelBaseActionController.startAction(
-        name: '_HomeViewModelBase.addDenemeList');
+        name: '_HomeViewModelBase.addInputList');
     try {
-      return super.addDenemeList(denemeModel);
+      return super.addInputList(inputModel);
+    } finally {
+      _$_HomeViewModelBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void returnThisMonth() {
+    final _$actionInfo = _$_HomeViewModelBaseActionController.startAction(
+        name: '_HomeViewModelBase.returnThisMonth');
+    try {
+      return super.returnThisMonth();
     } finally {
       _$_HomeViewModelBaseActionController.endAction(_$actionInfo);
     }
@@ -69,8 +64,7 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
   @override
   String toString() {
     return '''
-dummyList: ${dummyList},
-denemeList: ${denemeList}
+inputList: ${inputList}
     ''';
   }
 }

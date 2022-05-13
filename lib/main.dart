@@ -1,4 +1,5 @@
-import 'package:dabasirs_wallet/features/home/view/home_view.dart';
+import 'package:dabasirs_wallet/core/init/theme/my_theme.dart';
+import 'package:dabasirs_wallet/features/home/view/home_vieww.dart';
 import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,6 +33,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData.dark(), title: "Dabasir's Wallet", home: HomeView());
+        theme: myTheme, title: "Dabasir's Wallet", home: HomeVieww());
   }
 }
