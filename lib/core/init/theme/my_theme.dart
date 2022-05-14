@@ -18,6 +18,8 @@ ThemeData myTheme = ThemeData(
         headline5: TextStyle(
           color: ColorConstants.instance.white,
         ),
+        headline6:
+            TextStyle(color: ColorConstants.instance.white, fontSize: 16.sp),
         bodyText1:
             TextStyle(color: ColorConstants.instance.white, fontSize: 16.sp),
         bodyText2:
@@ -38,22 +40,22 @@ ThemeData myTheme = ThemeData(
     //   backgroundColor: ColorConstants.instance.white,
 
     // ),
+
     bottomAppBarTheme: BottomAppBarTheme(
       shape: const CircularNotchedRectangle(),
       color: ColorConstants.instance.shadyNeonBlue,
     ),
     tabBarTheme: TabBarTheme(
-      indicator: BoxDecoration(
-        color: ColorConstants.instance.shadyNeonBlue,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      mouseCursor: MaterialStateMouseCursor.clickable,
-      indicatorSize: TabBarIndicatorSize.label,
-      labelColor: ColorConstants.instance.white,
-      unselectedLabelColor: ColorConstants.instance.lunarDust,
-      // unselectedLabelStyle: bodyText1,
-      // indicator: const UnderlineTabIndicator(
-      //     borderSide: BorderSide(
-      //   color: Colors.transparent,
-      // ))
-    ));
+        // indicator: BoxDecoration(
+        //   color: ColorConstants.instance.shadyNeonBlue,
+        //   borderRadius: BorderRadius.circular(30),
+        // ),
+        mouseCursor: MaterialStateMouseCursor.clickable,
+        indicatorSize: TabBarIndicatorSize.label,
+        labelColor: ColorConstants.instance.white,
+        unselectedLabelColor: ColorConstants.instance.lunarDust,
+        // unselectedLabelStyle: bodyText1,
+        indicator: const UnderlineTabIndicator(
+            borderSide: BorderSide(
+          color: Colors.transparent,
+        ))));

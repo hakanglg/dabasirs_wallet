@@ -29,11 +29,11 @@ class HomeVieww extends StatelessWidget with BaseState, NavigatorManager {
           appBar: AppBar(
             title: const Text(ApplicationConstants.APP_TITLE),
           ),
-          body: const TabBarView(
-            physics: NeverScrollableScrollPhysics(),
+          body: TabBarView(
+            physics: const NeverScrollableScrollPhysics(),
             children: [
               ChartsView(),
-              Center(
+              const Center(
                 child: Text("Profile"),
               ),
             ],

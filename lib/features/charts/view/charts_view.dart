@@ -26,6 +26,8 @@ class _ChartsViewState extends State<ChartsView>
     final currentMon = now.month - 1;
     print(currentMon);
     tabController.index = currentMon;
+    print(_viewModel.inputList[6].createdTime.month);
+    // print(_viewModel.inputList.length.toString());
   }
 
   @override
@@ -38,20 +40,31 @@ class _ChartsViewState extends State<ChartsView>
           child: TabBar(
             controller: tabController,
             isScrollable: true,
-            labelStyle: context.textTheme.bodyText1,
-            unselectedLabelStyle: context.textTheme.subtitle1,
-            indicatorPadding:
-                EdgeInsets.symmetric(vertical: context.dynamicWidth(.01)),
+            // labelPadding: const EdgeInsets.symmetric(horizontal: 20), // S
+            labelStyle: context.textTheme.headline6!
+                .copyWith(fontWeight: FontWeight.w800),
+            unselectedLabelStyle: context.textTheme.subtitle2,
+
+            // indicatorPadding: context.horizontalPaddingNormal,
             enableFeedback: true,
-            tabs: List.generate(
-              DateTime.monthsPerYear,
-              (i) => Padding(
-                padding: context.horizontalPaddingNormal,
+            tabs: _viewModel.months.map((month) {
+              return SizedBox(
+                width: context.dynamicWidth(.21),
                 child: Tab(
-                  text: _viewModel.months[i].toString(),
+                  text: month,
                 ),
-              ),
-            ),
+              );
+            }).toList(),
+
+            // List.generate(
+            //   _viewModel.months.length,
+            //   (i) => Padding(
+            //     padding: context.horizontalPaddingNormal,
+            //     child: Tab(
+            //       text: _viewModel.months[i].toString(),
+            //     ),
+            //   ),
+            // ),
           ),
         ),
 
@@ -60,9 +73,20 @@ class _ChartsViewState extends State<ChartsView>
           child: TabBarView(
             controller: tabController,
             children: List.generate(
-              _viewModel.months.length,
-              (index) => Text("${index + 1}"),
-            ),
+                _viewModel.months.length,
+                (i) => i + 1 == _viewModel.inputList[i].createdTime.month
+                    ? ListTile(
+                        title: Text(_viewModel.inputList[i].title,
+                            style: const TextStyle(color: Colors.white)),
+                        subtitle: Text(_viewModel.inputList[i].category,
+                            style: const TextStyle(color: Colors.white)),
+                      )
+                    : const Text("Data Girilmedi")),
+
+            // List.generate(
+            //   _viewModel.months.length,
+            //   (index) => Text("${index + 1}"),
+            // ),
           ),
         ),
       ],
