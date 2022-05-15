@@ -75,12 +75,27 @@ class _ChartsViewState extends State<ChartsView>
             children: List.generate(
                 _viewModel.months.length,
                 (i) => i + 1 == _viewModel.inputList[i].createdTime.month
-                    ? ListTile(
-                        title: Text(_viewModel.inputList[i].title,
-                            style: const TextStyle(color: Colors.white)),
-                        subtitle: Text(_viewModel.inputList[i].category,
-                            style: const TextStyle(color: Colors.white)),
-                      )
+                    ? ListView.builder(
+                        itemCount: _viewModel.januaryList.length,
+                        itemBuilder: (context, index) {
+                          return ListTile(
+                            leading: Text(_viewModel
+                                .inputList[i].createdTime.month
+                                .toString()),
+                            title: Text(
+                              _viewModel.inputList[index].title,
+                              style: context.textTheme.headline6!,
+                            ),
+                            subtitle: Text(
+                              _viewModel.inputList[index].category,
+                              style: context.textTheme.subtitle2!,
+                            ),
+                            trailing: Text(
+                              _viewModel.inputList[index].price.toString(),
+                              style: context.textTheme.headline6!,
+                            ),
+                          );
+                        })
                     : const Text("Data Girilmedi")),
 
             // List.generate(

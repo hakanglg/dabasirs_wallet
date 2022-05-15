@@ -24,7 +24,19 @@ abstract class _HomeViewModelBase with Store {
 
   // @observable
   // ObservableList<InputModel> inputList = ObservableList<InputModel>();
-
+  @observable
+  ObservableList<InputModel> januaryList = ObservableList<InputModel>.of([
+    InputModel(
+        title: "title1",
+        category: "Ocak0",
+        price: 1,
+        createdTime: DateTime.utc(1989, 1, 9)),
+    InputModel(
+        title: "title2",
+        category: "Ocak2",
+        price: 21,
+        createdTime: DateTime.utc(1989, 1, 11)),
+  ]);
   @observable
   ObservableList<InputModel> inputList = ObservableList<InputModel>.of([
     InputModel(
@@ -52,6 +64,11 @@ abstract class _HomeViewModelBase with Store {
         category: "mayıs  ",
         price: 2,
         createdTime: DateTime.utc(1989, 5, 9)),
+    InputModel(
+        title: "title5.2",
+        category: "mayıs.2  ",
+        price: 2,
+        createdTime: DateTime.utc(1989, 5, 10)),
     InputModel(
         title: "title6",
         category: "haziran ",
