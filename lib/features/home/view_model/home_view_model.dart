@@ -8,7 +8,7 @@ class HomeViewModel = _HomeViewModelBase with _$HomeViewModel;
 
 abstract class _HomeViewModelBase with Store {
   List months = [
-    'Ocak',
+    "Ocak",
     'Şubat',
     'Mart',
     'Nisan',
@@ -22,89 +22,44 @@ abstract class _HomeViewModelBase with Store {
     'Aralık'
   ];
 
-  // @observable
-  // ObservableList<InputModel> inputList = ObservableList<InputModel>();
   @observable
-  ObservableList<InputModel> januaryList = ObservableList<InputModel>.of([
-    InputModel(
-        title: "title1",
-        category: "Ocak0",
-        price: 1,
-        createdTime: DateTime.utc(1989, 1, 9)),
-    InputModel(
-        title: "title2",
-        category: "Ocak2",
-        price: 21,
-        createdTime: DateTime.utc(1989, 1, 11)),
-  ]);
+  ObservableList<InputModel> janList = ObservableList<InputModel>();
+
   @observable
-  ObservableList<InputModel> inputList = ObservableList<InputModel>.of([
-    InputModel(
-        title: "title1",
-        category: "Ocak0",
-        price: 1,
-        createdTime: DateTime.utc(1989, 1, 9)),
-    InputModel(
-        title: "title2",
-        category: "Şubat ",
-        price: 2,
-        createdTime: DateTime.utc(1989, 2, 9)),
-    InputModel(
-        title: "title3",
-        category: "mart ",
-        price: 3,
-        createdTime: DateTime.utc(1989, 3, 9)),
-    InputModel(
-        title: "title4",
-        category: "nisann ",
-        price: 1,
-        createdTime: DateTime.utc(1989, 4, 9)),
-    InputModel(
-        title: "title5",
-        category: "mayıs  ",
-        price: 2,
-        createdTime: DateTime.utc(1989, 5, 9)),
-    InputModel(
-        title: "title5.2",
-        category: "mayıs.2  ",
-        price: 2,
-        createdTime: DateTime.utc(1989, 5, 10)),
-    InputModel(
-        title: "title6",
-        category: "haziran ",
-        price: 3,
-        createdTime: DateTime.utc(1989, 6, 9)),
-    InputModel(
-        title: "title7",
-        category: "temmuz",
-        price: 1,
-        createdTime: DateTime.utc(1989, 7, 9)),
-    InputModel(
-        title: "title8",
-        category: "ağust ",
-        price: 2,
-        createdTime: DateTime.utc(1989, 8, 9)),
-    InputModel(
-        title: "title9",
-        category: "category8",
-        price: 3,
-        createdTime: DateTime.now()),
-    InputModel(
-        title: "title10",
-        category: "category9",
-        price: 1,
-        createdTime: DateTime.now()),
-    InputModel(
-        title: "title11",
-        category: "category10",
-        price: 2,
-        createdTime: DateTime.now()),
-    InputModel(
-        title: "title12",
-        category: "category11",
-        price: 3,
-        createdTime: DateTime.now())
-  ]);
+  ObservableList<InputModel> febList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> marchList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> aprilList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> mayList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> juneList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> julyList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> augList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> sepList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> octList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> novList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> decList = ObservableList<InputModel>();
+
+  @observable
+  ObservableList<InputModel> inputList = ObservableList<InputModel>();
 
   @action
   void dummyVoid() {
@@ -113,7 +68,22 @@ abstract class _HomeViewModelBase with Store {
 
   @action
   void addInputList(InputModel inputModel) {
-    inputList.add(inputModel);
+    if (inputModel.createdTime.month == 1) {
+      janList.add(inputModel);
+    } else if (inputModel.createdTime.month == 2) {
+      febList.add(inputModel);
+    } else if (inputModel.createdTime.month == 3) {
+      marchList.add(inputModel);
+    } else if (inputModel.createdTime.month == 4) {
+      mayList.add(inputModel);
+      print("4e eklendi");
+    } else if (inputModel.createdTime.month == 5) {
+      mayList.add(inputModel);
+      print("55e eklendi");
+    } else {
+      inputList.add(inputModel);
+      print("bi bokluk var");
+    }
   }
 
   @action

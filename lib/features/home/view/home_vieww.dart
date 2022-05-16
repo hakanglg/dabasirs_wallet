@@ -1,17 +1,18 @@
 import 'package:dabasirs_wallet/core/base/base_state.dart';
 import 'package:dabasirs_wallet/core/constants/app/app_constants.dart';
 import 'package:dabasirs_wallet/core/constants/color/color_constants.dart';
-import 'package:dabasirs_wallet/features/add_input/view/add_input_view.dart';
 import 'package:dabasirs_wallet/features/charts/view/charts_view.dart';
 import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/manager/navigation_manager.dart';
+import '../../add_input/view/add_input_view.dart';
 
 class HomeVieww extends StatelessWidget with BaseState, NavigatorManager {
   final HomeViewModel _viewModel = HomeViewModel();
   final _defaultTabController = 2;
   final double _notchedValue = 10.0;
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -20,20 +21,20 @@ class HomeVieww extends StatelessWidget with BaseState, NavigatorManager {
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
           floatingActionButton: FloatingActionButton(
-            onPressed: () => navigateToWidget(context, AddInputView()),
-            child: Icon(
-              Icons.add,
-              color: colorConstants.black,
-            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => AddInputView()));
+            },
+            child: const Icon(Icons.add),
           ),
           appBar: AppBar(
             title: const Text(ApplicationConstants.APP_TITLE),
           ),
-          body: TabBarView(
-            physics: const NeverScrollableScrollPhysics(),
+          body: const TabBarView(
+            physics: NeverScrollableScrollPhysics(),
             children: [
               ChartsView(),
-              const Center(
+              Center(
                 child: Text("Profile"),
               ),
             ],

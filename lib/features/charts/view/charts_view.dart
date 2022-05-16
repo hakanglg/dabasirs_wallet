@@ -1,7 +1,10 @@
 import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kartal/kartal.dart';
+import 'package:mobx/mobx.dart';
 import '../../../core/base/base_state.dart';
+import '../../../product/model/input_model.dart';
 
 class ChartsView extends StatefulWidget {
   const ChartsView({Key? key}) : super(key: key);
@@ -24,9 +27,9 @@ class _ChartsViewState extends State<ChartsView>
     super.initState();
     now = DateTime.now();
     final currentMon = now.month - 1;
-    print(currentMon);
+    // print(currentMon);
     tabController.index = currentMon;
-    print(_viewModel.inputList[6].createdTime.month);
+
     // print(_viewModel.inputList.length.toString());
   }
 
@@ -47,65 +50,72 @@ class _ChartsViewState extends State<ChartsView>
 
             // indicatorPadding: context.horizontalPaddingNormal,
             enableFeedback: true,
-            tabs: _viewModel.months.map((month) {
-              return SizedBox(
-                width: context.dynamicWidth(.21),
+            tabs: List.generate(
+              _viewModel.months.length,
+              (i) => Padding(
+                padding: context.horizontalPaddingNormal,
                 child: Tab(
-                  text: month,
+                  text: _viewModel.months[i].toString(),
                 ),
-              );
-            }).toList(),
-
-            // List.generate(
-            //   _viewModel.months.length,
-            //   (i) => Padding(
-            //     padding: context.horizontalPaddingNormal,
-            //     child: Tab(
-            //       text: _viewModel.months[i].toString(),
-            //     ),
-            //   ),
-            // ),
+              ),
+            ),
           ),
         ),
 
         // VIEW SECTION
         Expanded(
-          child: TabBarView(
-            controller: tabController,
-            children: List.generate(
-                _viewModel.months.length,
-                (i) => i + 1 == _viewModel.inputList[i].createdTime.month
-                    ? ListView.builder(
-                        itemCount: _viewModel.januaryList.length,
-                        itemBuilder: (context, index) {
-                          return ListTile(
-                            leading: Text(_viewModel
-                                .inputList[i].createdTime.month
-                                .toString()),
-                            title: Text(
-                              _viewModel.inputList[index].title,
-                              style: context.textTheme.headline6!,
-                            ),
-                            subtitle: Text(
-                              _viewModel.inputList[index].category,
-                              style: context.textTheme.subtitle2!,
-                            ),
-                            trailing: Text(
-                              _viewModel.inputList[index].price.toString(),
-                              style: context.textTheme.headline6!,
-                            ),
-                          );
-                        })
-                    : const Text("Data Girilmedi")),
-
-            // List.generate(
-            //   _viewModel.months.length,
-            //   (index) => Text("${index + 1}"),
-            // ),
-          ),
-        ),
+            child: TabBarView(
+          controller: tabController,
+          children: [
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+            Container(color: context.randomColor),
+          ],
+        )),
       ],
     );
+  }
+
+  TabBarView _gecicitabbarview() {
+    return TabBarView(controller: tabController, children: [
+      _monthlyListViewBuilder(_viewModel.janList),
+      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.marchList),
+      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.mayList),
+      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.febList),
+    ]);
+  }
+
+  Observer _monthlyListViewBuilder(
+    ObservableList<InputModel> listName,
+  ) {
+    return Observer(builder: (_) {
+      return ListView.builder(
+        itemCount: listName.length,
+        itemBuilder: (context, index) => ListTile(
+          leading: Text(listName[index].category.toString()),
+          title: Text(listName[index].title),
+          subtitle: Text(listName[index].price.toString()),
+          trailing: Text(listName[index].createdTime.toString()),
+        ),
+      );
+    });
   }
 }
 // Column(
