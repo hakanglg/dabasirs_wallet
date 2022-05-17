@@ -29,13 +29,16 @@ ThemeData myTheme = ThemeData(
             fontWeight: FontWeight.w300,
             fontSize: 12.sp)),
     inputDecorationTheme: InputDecorationTheme(
+        floatingLabelAlignment: FloatingLabelAlignment.center,
+        labelStyle: TextStyle(
+            color: ColorConstants.instance.metroidRed, fontSize: 16.sp),
         focusColor: ColorConstants.instance.blueAngelsYellow,
         iconColor: ColorConstants.instance.blueExult,
         hintStyle: TextStyle(color: ColorConstants.instance.grey),
         fillColor: ColorConstants.instance.white,
         filled: true,
         border: OutlineInputBorder(
-            borderRadius: BorderConstants.instance.radiusAllHigh)),
+            borderRadius: BorderConstants.instance.radiusAllLow)),
     // bottomNavigationBarTheme: BottomNavigationBarThemeData(
     //   backgroundColor: ColorConstants.instance.white,
 

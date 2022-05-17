@@ -1,3 +1,4 @@
+import 'package:dabasirs_wallet/product/components/bottom_sheet/select_category_bottom_sheet.dart';
 import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
@@ -69,8 +70,9 @@ abstract class _HomeViewModelBase with Store {
   ObservableList<InputModel> inputList = ObservableList<InputModel>();
 
   @action
-  void showAddTaskModelBottomSheet(BuildContext context, Widget child) {
-    showModalBottomSheet(context: context, builder: (context) => child);
+  void showSelectCategoryBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+        context: context, builder: (context) => SelectCategoryBottomSheet());
   }
 
   @action

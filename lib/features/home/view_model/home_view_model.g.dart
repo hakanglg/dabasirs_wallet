@@ -253,11 +253,11 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       ActionController(name: '_HomeViewModelBase', context: context);
 
   @override
-  void showAddTaskModelBottomSheet(BuildContext context, Widget child) {
+  void showSelectCategoryBottomSheet(BuildContext context) {
     final _$actionInfo = _$_HomeViewModelBaseActionController.startAction(
-        name: '_HomeViewModelBase.showAddTaskModelBottomSheet');
+        name: '_HomeViewModelBase.showSelectCategoryBottomSheet');
     try {
-      return super.showAddTaskModelBottomSheet(context, child);
+      return super.showSelectCategoryBottomSheet(context);
     } finally {
       _$_HomeViewModelBaseActionController.endAction(_$actionInfo);
     }
