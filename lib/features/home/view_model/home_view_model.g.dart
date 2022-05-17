@@ -9,6 +9,38 @@ part of 'home_view_model.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HomeViewModel on _HomeViewModelBase, Store {
+  late final _$currencyUnitAtom =
+      Atom(name: '_HomeViewModelBase.currencyUnit', context: context);
+
+  @override
+  String get currencyUnit {
+    _$currencyUnitAtom.reportRead();
+    return super.currencyUnit;
+  }
+
+  @override
+  set currencyUnit(String value) {
+    _$currencyUnitAtom.reportWrite(value, super.currencyUnit, () {
+      super.currencyUnit = value;
+    });
+  }
+
+  late final _$totalIncomesAtom =
+      Atom(name: '_HomeViewModelBase.totalIncomes', context: context);
+
+  @override
+  double get totalIncomes {
+    _$totalIncomesAtom.reportRead();
+    return super.totalIncomes;
+  }
+
+  @override
+  set totalIncomes(double value) {
+    _$totalIncomesAtom.reportWrite(value, super.totalIncomes, () {
+      super.totalIncomes = value;
+    });
+  }
+
   late final _$janListAtom =
       Atom(name: '_HomeViewModelBase.janList', context: context);
 
@@ -221,11 +253,11 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       ActionController(name: '_HomeViewModelBase', context: context);
 
   @override
-  void dummyVoid() {
+  void showAddTaskModelBottomSheet(BuildContext context, Widget child) {
     final _$actionInfo = _$_HomeViewModelBaseActionController.startAction(
-        name: '_HomeViewModelBase.dummyVoid');
+        name: '_HomeViewModelBase.showAddTaskModelBottomSheet');
     try {
-      return super.dummyVoid();
+      return super.showAddTaskModelBottomSheet(context, child);
     } finally {
       _$_HomeViewModelBaseActionController.endAction(_$actionInfo);
     }
@@ -256,6 +288,8 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
   @override
   String toString() {
     return '''
+currencyUnit: ${currencyUnit},
+totalIncomes: ${totalIncomes},
 janList: ${janList},
 febList: ${febList},
 marchList: ${marchList},

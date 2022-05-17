@@ -5,6 +5,8 @@ import 'package:dabasirs_wallet/core/manager/navigation_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
+import '../../../product/components/add_square_container/add_square.dart';
+import '../../../product/enums/category_enum.dart';
 import '../../../product/model/input_model.dart';
 import '../../home/view/home_vieww.dart';
 import '../../home/view_model/home_view_model.dart';
@@ -20,83 +22,77 @@ class AddInputView extends StatelessWidget with NavigatorManager, BaseState {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Add Input'),
-        ),
-        body: MyRow(
-          child: MyColumn(
-            child: Column(
+      body: MyColumn(
+          child: MyRow(
+              child: Column(
+        children: [
+          Expanded(child: _gecici(context)),
+          Expanded(
+            child: Row(
               children: [
-                const Spacer(
-                  flex: 2,
-                ),
                 Expanded(
-                    flex: 3,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Expanded(
-                          child: Container(
-                            decoration: ShapeDecoration(
-                              shape: borderConstants.radiusRoundedAllLow,
-                              color: colorConstants.caribbienGreen,
-                            ),
-                          ),
-                        ),
-                        context.emptySizedHeightBoxLow3x,
-                        Expanded(
-                          child: Container(
-                            decoration: ShapeDecoration(
-                              shape: borderConstants.radiusRoundedAllLow,
-                              color: colorConstants.shadyNeonBlue,
-                            ),
-                          ),
-                        ),
-                        context.emptySizedHeightBoxLow3x,
-                        Expanded(
-                          child: Container(
-                            decoration: ShapeDecoration(
-                              shape: borderConstants.radiusRoundedAllLow,
-                              color: colorConstants.blueAngelsYellow,
-                            ),
-                          ),
-                        ),
-                        context.emptySizedHeightBoxLow3x,
-                        Expanded(
-                          child: Container(
-                            decoration: ShapeDecoration(
-                              shape: borderConstants.radiusRoundedAllLow,
-                              color: colorConstants.metroidRed,
-                            ),
-                          ),
-                        ),
-                      ],
-                    )),
+                  child: AddSquare(
+                    category: CategoryEnum.Income.name,
+                    color: colorConstants.caribbienGreen,
+                    onTap: () {},
+                  ),
+                ),
+                context.emptySizedWidthBoxNormal,
+                Expanded(
+                  child: AddSquare(
+                    category: CategoryEnum.Expenses.name,
+                    color: colorConstants.metroidRed,
+                    onTap: () {},
+                  ),
+                ),
               ],
             ),
           ),
-        ));
+          context.emptySizedHeightBoxLow3x,
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: AddSquare(
+                    category: CategoryEnum.Savings.name,
+                    color: colorConstants.shadyNeonBlue,
+                    onTap: () {},
+                  ),
+                ),
+                context.emptySizedWidthBoxNormal,
+                Expanded(
+                  child: AddSquare(
+                    category: CategoryEnum.Stuffs.name,
+                    color: colorConstants.blueAngelsYellow,
+                    onTap: () {},
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ))),
+    );
   }
 
   Column _gecici(BuildContext context) {
     return Column(
       children: [
-        TextField(
-          controller: titleController,
-          decoration: const InputDecoration(
-            labelText: 'Title',
+        Expanded(
+          child: TextField(
+            controller: titleController,
+            decoration: const InputDecoration(
+              labelText: 'Title',
+            ),
           ),
         ),
-        TextField(
-          controller: categoryController,
-          decoration: const InputDecoration(
-            labelText: 'Category',
-          ),
-        ),
-        TextField(
-          controller: priceController,
-          decoration: const InputDecoration(
-            labelText: 'Price',
+
+        Expanded(
+          child: TextField(
+            controller: priceController,
+            decoration: const InputDecoration(
+              labelText: 'Price',
+            ),
           ),
         ),
         // const TextField(

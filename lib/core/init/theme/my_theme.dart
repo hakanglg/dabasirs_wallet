@@ -40,7 +40,7 @@ ThemeData myTheme = ThemeData(
     //   backgroundColor: ColorConstants.instance.white,
 
     // ),
-
+    iconTheme: IconThemeData(color: ColorConstants.instance.white),
     bottomAppBarTheme: BottomAppBarTheme(
       shape: const CircularNotchedRectangle(),
       color: ColorConstants.instance.shadyNeonBlue,

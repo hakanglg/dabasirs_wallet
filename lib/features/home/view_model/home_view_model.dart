@@ -1,4 +1,5 @@
 import 'package:date_format/date_format.dart';
+import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import '../../../product/model/input_model.dart';
 
@@ -7,6 +8,12 @@ part 'home_view_model.g.dart';
 class HomeViewModel = _HomeViewModelBase with _$HomeViewModel;
 
 abstract class _HomeViewModelBase with Store {
+  @observable
+  String currencyUnit = "USD";
+
+  @observable
+  double totalIncomes = 0;
+
   List months = [
     "Ocak",
     'Şubat',
@@ -62,8 +69,8 @@ abstract class _HomeViewModelBase with Store {
   ObservableList<InputModel> inputList = ObservableList<InputModel>();
 
   @action
-  void dummyVoid() {
-    print('dummyVoid');
+  void showAddTaskModelBottomSheet(BuildContext context, Widget child) {
+    showModalBottomSheet(context: context, builder: (context) => child);
   }
 
   @action
