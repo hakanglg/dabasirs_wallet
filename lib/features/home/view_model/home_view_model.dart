@@ -2,6 +2,7 @@ import 'package:dabasirs_wallet/product/components/bottom_sheet/select_category_
 import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
+import '../../../product/enums/category_enum.dart';
 import '../../../product/model/input_model.dart';
 
 part 'home_view_model.g.dart';
@@ -87,6 +88,10 @@ abstract class _HomeViewModelBase with Store {
       mayList.add(inputModel);
       print("4e eklendi");
     } else if (inputModel.createdTime.month == 5) {
+      if (inputModel.category == CategoryEnum.Income.name) {
+        totalIncomes += inputModel.price;
+        print(totalIncomes);
+      }
       mayList.add(inputModel);
       print("55e eklendi");
     } else {

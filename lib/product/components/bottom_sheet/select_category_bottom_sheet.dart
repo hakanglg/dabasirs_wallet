@@ -6,13 +6,15 @@ import 'package:kartal/kartal.dart';
 import '../../../core/components/column/my_column.dart';
 import '../../../core/components/row/my_row.dart';
 import '../../enums/category_enum.dart';
+import '../../model/input_model.dart';
 import '../add_square_container/add_square.dart';
 
 class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
   final HomeViewModel _viewModel = HomeViewModel();
   TextEditingController titleController = TextEditingController();
   TextEditingController priceController = TextEditingController();
-
+// TODO Text savelemiyor onu çöz
+// TODO Charts viewa başla
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,9 +31,9 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
                 controller: titleController,
                 textAlign: TextAlign.center,
                 textInputAction: TextInputAction.next,
-                keyboardType: TextInputType.text,
+                // keyboardType: TextInputType.text,
                 autofocus: true,
-                // controller: titleController,
+
                 decoration: const InputDecoration(hintText: "Definition"),
               )),
               context.emptySizedWidthBoxNormal,
@@ -56,7 +58,13 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
                   child: AddSquare(
                     category: CategoryEnum.Income.name,
                     color: colorConstants.caribbienGreen,
-                    onTap: () {},
+                    onTap: () {
+                      _viewModel.addInputList(InputModel(
+                          title: titleController.text,
+                          price: int.parse(priceController.text),
+                          category: CategoryEnum.Income.name,
+                          createdTime: DateTime.now()));
+                    },
                   ),
                 ),
                 context.emptySizedWidthBoxNormal,
@@ -64,7 +72,13 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
                   child: AddSquare(
                     category: CategoryEnum.Expenses.name,
                     color: colorConstants.metroidRed,
-                    onTap: () {},
+                    onTap: () {
+                      _viewModel.addInputList(InputModel(
+                          title: titleController.text,
+                          price: int.parse(priceController.text),
+                          category: CategoryEnum.Expenses.name,
+                          createdTime: DateTime.now()));
+                    },
                   ),
                 ),
               ],
@@ -78,7 +92,13 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
                   child: AddSquare(
                     category: CategoryEnum.Savings.name,
                     color: colorConstants.shadyNeonBlue,
-                    onTap: () {},
+                    onTap: () {
+                      _viewModel.addInputList(InputModel(
+                          title: titleController.text,
+                          price: int.parse(priceController.text),
+                          category: CategoryEnum.Savings.name,
+                          createdTime: DateTime.now()));
+                    },
                   ),
                 ),
                 context.emptySizedWidthBoxNormal,
@@ -86,7 +106,13 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
                   child: AddSquare(
                     category: CategoryEnum.Stuffs.name,
                     color: colorConstants.blueAngelsYellow,
-                    onTap: () {},
+                    onTap: () {
+                      _viewModel.addInputList(InputModel(
+                          title: titleController.text,
+                          price: int.parse(priceController.text),
+                          category: CategoryEnum.Stuffs.name,
+                          createdTime: DateTime.now()));
+                    },
                   ),
                 ),
               ],
