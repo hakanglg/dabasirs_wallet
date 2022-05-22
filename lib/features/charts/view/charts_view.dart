@@ -4,6 +4,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kartal/kartal.dart';
 import 'package:mobx/mobx.dart';
 import '../../../core/base/base_state.dart';
+import '../../../product/components/charts/piee_charts.dart';
 import '../../../product/model/input_model.dart';
 
 class ChartsView extends StatefulWidget {
@@ -67,7 +68,7 @@ class _ChartsViewState extends State<ChartsView>
             child: TabBarView(
           controller: tabController,
           children: [
-            Container(color: context.randomColor),
+            PieeCharts(),
             Container(color: context.randomColor),
             Container(color: context.randomColor),
             Container(color: context.randomColor),

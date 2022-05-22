@@ -14,7 +14,13 @@ abstract class _HomeViewModelBase with Store {
   String currencyUnit = "USD";
 
   @observable
-  double totalIncomes = 0;
+  double totalIncomes = 70;
+  @observable
+  double totalExpenses = 20;
+  @observable
+  double totalSaving = 5;
+  @observable
+  double totalStuffs = 5;
 
   List months = [
     "Ocak",
@@ -71,12 +77,6 @@ abstract class _HomeViewModelBase with Store {
   ObservableList<InputModel> inputList = ObservableList<InputModel>();
 
   @action
-  void showSelectCategoryBottomSheet(BuildContext context) {
-    showModalBottomSheet(
-        context: context, builder: (context) => SelectCategoryBottomSheet());
-  }
-
-  @action
   void addInputList(InputModel inputModel) {
     if (inputModel.createdTime.month == 1) {
       janList.add(inputModel);
@@ -98,6 +98,12 @@ abstract class _HomeViewModelBase with Store {
       inputList.add(inputModel);
       print("bi bokluk var");
     }
+  }
+
+  @action
+  void showSelectCategoryBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+        context: context, builder: (context) => SelectCategoryBottomSheet());
   }
 
   @action
