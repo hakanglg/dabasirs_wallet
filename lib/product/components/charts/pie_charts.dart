@@ -1,32 +1,34 @@
 import 'package:dabasirs_wallet/core/base/base_state.dart';
 import 'package:dabasirs_wallet/core/constants/color/color_constants.dart';
 import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
-import 'package:dabasirs_wallet/product/enums/category_enum.dart';
+
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class PieeCharts extends StatelessWidget with BaseState {
+import '../../../core/constants/enums/category_enum.dart';
+
+class PieCharts extends StatelessWidget with BaseState {
   final HomeViewModel viewModel = HomeViewModel();
 
-  // PieeCharts({Key? key, required this.viewModel}) : super(key: key);
-  void selectJanList() {
-    var janTotalList = 0;
-    viewModel.janList.forEach((element) {
-      janTotalList += element.amount;
-    });
-  }
+  // PieCharts({Key? key, required this.viewModel}) : super(key: key);
+  // void selectJanList() {
+  //   var janTotalList = 0;
+  //   for (var element in viewModel.janList) {
+  //     janTotalList += element.amount;
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
     List<ChartData> chartData = [
-      ChartData(CategoryEnum.Income.name, viewModel.totalIncomes,
+      ChartData(Category.Income.name, viewModel.totalIncomes,
           ColorConstants.instance.caribbienGreen),
-      ChartData(CategoryEnum.Expenses.name, viewModel.totalExpenses,
+      ChartData(Category.Expenses.name, viewModel.totalExpenses,
           ColorConstants.instance.metroidRed),
-      ChartData(CategoryEnum.Savings.name, viewModel.totalSaving,
+      ChartData(Category.Savings.name, viewModel.totalSaving,
           ColorConstants.instance.shadyNeonBlue),
-      ChartData(CategoryEnum.Stuffs.name, viewModel.totalStuffs,
+      ChartData(Category.Stuffs.name, viewModel.totalStuffs,
           ColorConstants.instance.blueAngelsYellow),
     ];
 

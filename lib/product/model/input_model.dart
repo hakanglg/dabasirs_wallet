@@ -12,9 +12,11 @@
 //   Task({required this.title, this.isDone = false, required this.uuid});
 // }
 
+import '../../core/constants/enums/category_enum.dart';
+
 class InputModel {
   final String title;
-  final String category;
+  final Category category;
   final int price;
   final DateTime createdTime;
 

@@ -1,10 +1,11 @@
 import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
+import 'package:dabasirs_wallet/product/components/charts/deneme_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kartal/kartal.dart';
 import 'package:mobx/mobx.dart';
 import '../../../core/base/base_state.dart';
-import '../../../product/components/charts/piee_charts.dart';
+import '../../../product/components/charts/pie_charts.dart';
 import '../../../product/model/input_model.dart';
 
 class ChartsView extends StatefulWidget {
@@ -30,6 +31,7 @@ class _ChartsViewState extends State<ChartsView>
     final currentMon = now.month - 1;
     // print(currentMon);
     tabController.index = currentMon;
+    print(tabController.index);
 
     // print(_viewModel.inputList.length.toString());
   }
@@ -68,7 +70,7 @@ class _ChartsViewState extends State<ChartsView>
             child: TabBarView(
           controller: tabController,
           children: [
-            PieeCharts(),
+            const DenmeViewChart(),
             Container(color: context.randomColor),
             Container(color: context.randomColor),
             Container(color: context.randomColor),

@@ -5,7 +5,8 @@ import 'package:kartal/kartal.dart';
 
 import '../../../core/components/column/my_column.dart';
 import '../../../core/components/row/my_row.dart';
-import '../../enums/category_enum.dart';
+import '../../../core/constants/enums/category_enum.dart';
+
 import '../../model/input_model.dart';
 import '../add_square_container/add_square.dart';
 
@@ -28,9 +29,10 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
             children: [
               Expanded(
                   child: TextField(
+                enabled: true,
                 controller: titleController,
                 textAlign: TextAlign.center,
-                textInputAction: TextInputAction.next,
+                // textInputAction: TextInputAction.next,
                 // keyboardType: TextInputType.text,
                 autofocus: true,
 
@@ -39,6 +41,7 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
               context.emptySizedWidthBoxNormal,
               Expanded(
                 child: TextField(
+                  enabled: true,
                   controller: priceController,
                   textAlign: TextAlign.center,
                   textInputAction: TextInputAction.done,
@@ -56,13 +59,13 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
               children: [
                 Expanded(
                   child: AddSquare(
-                    category: CategoryEnum.Income.name,
+                    category: Category.Income.name,
                     color: colorConstants.caribbienGreen,
                     onTap: () {
                       _viewModel.addInputList(InputModel(
                           title: titleController.text,
                           price: int.parse(priceController.text),
-                          category: CategoryEnum.Income.name,
+                          category: Category.Income,
                           createdTime: DateTime.now()));
                     },
                   ),
@@ -70,13 +73,13 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
                 context.emptySizedWidthBoxNormal,
                 Expanded(
                   child: AddSquare(
-                    category: CategoryEnum.Expenses.name,
+                    category: Category.Expenses.name,
                     color: colorConstants.metroidRed,
                     onTap: () {
                       _viewModel.addInputList(InputModel(
                           title: titleController.text,
                           price: int.parse(priceController.text),
-                          category: CategoryEnum.Expenses.name,
+                          category: Category.Expenses,
                           createdTime: DateTime.now()));
                     },
                   ),
@@ -90,13 +93,13 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
               children: [
                 Expanded(
                   child: AddSquare(
-                    category: CategoryEnum.Savings.name,
+                    category: Category.Savings.name,
                     color: colorConstants.shadyNeonBlue,
                     onTap: () {
                       _viewModel.addInputList(InputModel(
                           title: titleController.text,
                           price: int.parse(priceController.text),
-                          category: CategoryEnum.Savings.name,
+                          category: Category.Savings,
                           createdTime: DateTime.now()));
                     },
                   ),
@@ -104,13 +107,13 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
                 context.emptySizedWidthBoxNormal,
                 Expanded(
                   child: AddSquare(
-                    category: CategoryEnum.Stuffs.name,
+                    category: Category.Stuffs.name,
                     color: colorConstants.blueAngelsYellow,
                     onTap: () {
                       _viewModel.addInputList(InputModel(
                           title: titleController.text,
                           price: int.parse(priceController.text),
-                          category: CategoryEnum.Stuffs.name,
+                          category: Category.Stuffs,
                           createdTime: DateTime.now()));
                     },
                   ),
