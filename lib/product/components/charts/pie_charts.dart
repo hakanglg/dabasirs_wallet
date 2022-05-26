@@ -22,13 +22,13 @@ class PieCharts extends StatelessWidget with BaseState {
   @override
   Widget build(BuildContext context) {
     List<ChartData> chartData = [
-      ChartData(Category.Income.name, viewModel.totalIncomes,
+      ChartData(Category.Income.name, viewModel.aprilExpensesTotal.toDouble(),
           ColorConstants.instance.caribbienGreen),
-      ChartData(Category.Expenses.name, viewModel.totalExpenses,
+      ChartData(Category.Expenses.name, viewModel.aprilExpensesTotal.toDouble(),
           ColorConstants.instance.metroidRed),
-      ChartData(Category.Savings.name, viewModel.totalSaving,
+      ChartData(Category.Savings.name, viewModel.aprilExpensesTotal.toDouble(),
           ColorConstants.instance.shadyNeonBlue),
-      ChartData(Category.Stuffs.name, viewModel.totalStuffs,
+      ChartData(Category.Stuffs.name, viewModel.aprilExpensesTotal.toDouble(),
           ColorConstants.instance.blueAngelsYellow),
     ];
 

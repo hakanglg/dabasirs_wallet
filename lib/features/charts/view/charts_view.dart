@@ -5,7 +5,6 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kartal/kartal.dart';
 import 'package:mobx/mobx.dart';
 import '../../../core/base/base_state.dart';
-import '../../../product/components/charts/pie_charts.dart';
 import '../../../product/model/input_model.dart';
 
 class ChartsView extends StatefulWidget {
@@ -90,18 +89,18 @@ class _ChartsViewState extends State<ChartsView>
 
   TabBarView _gecicitabbarview() {
     return TabBarView(controller: tabController, children: [
-      _monthlyListViewBuilder(_viewModel.janList),
-      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.januaryList),
+      _monthlyListViewBuilder(_viewModel.februaryList),
       _monthlyListViewBuilder(_viewModel.marchList),
-      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.aprilList),
       _monthlyListViewBuilder(_viewModel.mayList),
-      _monthlyListViewBuilder(_viewModel.febList),
-      _monthlyListViewBuilder(_viewModel.febList),
-      _monthlyListViewBuilder(_viewModel.febList),
-      _monthlyListViewBuilder(_viewModel.febList),
-      _monthlyListViewBuilder(_viewModel.febList),
-      _monthlyListViewBuilder(_viewModel.febList),
-      _monthlyListViewBuilder(_viewModel.febList),
+      _monthlyListViewBuilder(_viewModel.juneList),
+      _monthlyListViewBuilder(_viewModel.julyList),
+      _monthlyListViewBuilder(_viewModel.augustList),
+      _monthlyListViewBuilder(_viewModel.septemberList),
+      _monthlyListViewBuilder(_viewModel.octoberList),
+      _monthlyListViewBuilder(_viewModel.novemberList),
+      _monthlyListViewBuilder(_viewModel.decemberList),
     ]);
   }
 
