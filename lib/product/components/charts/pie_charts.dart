@@ -38,9 +38,7 @@ class PieCharts extends StatelessWidget with BaseState {
           ColorConstants.instance.blueAngelsYellow),
     ];
 
-    return Center(
-        child: Container(
-            child: SfCircularChart(series: <DoughnutSeries>[
+    return SfCircularChart(series: <DoughnutSeries>[
       // Render pie chart
       DoughnutSeries<ChartData, String>(
           animationDuration: animationDuration,
@@ -48,20 +46,23 @@ class PieCharts extends StatelessWidget with BaseState {
           explode: true,
           legendIconType: LegendIconType.diamond,
           dataLabelSettings: DataLabelSettings(
-            
             isVisible: false,
             labelPosition: ChartDataLabelPosition.inside,
-            textStyle: TextStyle(
-              fontSize: context.dynamicHeight(.02),
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+            textStyle: _pieChartTextStyle(context),
           ),
           dataSource: chartData,
           pointColorMapper: (ChartData data, _) => data.color,
           xValueMapper: (ChartData data, _) => data.x,
           yValueMapper: (ChartData data, _) => data.y)
-    ])));
+    ]);
+  }
+
+  TextStyle _pieChartTextStyle(BuildContext context) {
+    return TextStyle(
+      fontSize: context.dynamicHeight(.02),
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
+    );
   }
 }
 

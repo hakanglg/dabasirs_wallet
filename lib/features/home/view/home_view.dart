@@ -1,7 +1,7 @@
 import 'package:dabasirs_wallet/core/base/base_state.dart';
-import 'package:dabasirs_wallet/core/constants/app/app_constants.dart';
 import 'package:dabasirs_wallet/features/charts/view/charts_view.dart';
 import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
+import 'package:dabasirs_wallet/product/components/rich_text/appbar_title_rich_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/manager/navigation_manager.dart';
@@ -26,7 +26,7 @@ class HomeView extends StatelessWidget with BaseState, NavigatorManager {
             ),
           ),
           appBar: AppBar(
-            title: const Text(ApplicationConstants.APP_TITLE),
+            title: AppBarTitleRichText(),
           ),
           body: const TabBarView(
             physics: NeverScrollableScrollPhysics(),

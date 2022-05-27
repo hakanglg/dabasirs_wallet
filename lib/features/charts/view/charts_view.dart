@@ -1,11 +1,8 @@
-import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
+import 'package:dabasirs_wallet/features/charts/view_model/charts_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kartal/kartal.dart';
-import 'package:mobx/mobx.dart';
 import '../../../core/base/base_state.dart';
 import '../../../product/components/charts/pie_charts.dart';
-import '../../../product/model/input_model.dart';
 
 class ChartsView extends StatefulWidget {
   const ChartsView({Key? key}) : super(key: key);
@@ -18,12 +15,26 @@ class _ChartsViewState extends State<ChartsView>
     with TickerProviderStateMixin, BaseState {
   late TabController tabController;
   late final now;
-  final HomeViewModel _viewModel = HomeViewModel();
+  final ChartsViewModel _viewModel = ChartsViewModel();
+
+  final List _months = [
+    "Ocak",
+    'Şubat',
+    'Mart',
+    'Nisan',
+    'Mayıs',
+    'Haziran',
+    'Temmuz',
+    'Ağustos',
+    'Eylül',
+    'Ekim',
+    'Kasım',
+    'Aralık'
+  ];
 
   @override
   void initState() {
-    tabController =
-        TabController(length: _viewModel.months.length, vsync: this);
+    tabController = TabController(length: _months.length, vsync: this);
 
     super.initState();
     now = DateTime.now();
@@ -53,11 +64,11 @@ class _ChartsViewState extends State<ChartsView>
             // indicatorPadding: context.horizontalPaddingNormal,
             enableFeedback: true,
             tabs: List.generate(
-              _viewModel.months.length,
+              _months.length,
               (i) => Padding(
                 padding: context.horizontalPaddingNormal,
                 child: Tab(
-                  text: _viewModel.months[i].toString(),
+                  text: _months[i].toString(),
                 ),
               ),
             ),
@@ -134,52 +145,4 @@ class _ChartsViewState extends State<ChartsView>
       ],
     );
   }
-
-  TabBarView _gecicitabbarview() {
-    return TabBarView(controller: tabController, children: [
-      _monthlyListViewBuilder(_viewModel.januaryList),
-      _monthlyListViewBuilder(_viewModel.februaryList),
-      _monthlyListViewBuilder(_viewModel.marchList),
-      _monthlyListViewBuilder(_viewModel.aprilList),
-      _monthlyListViewBuilder(_viewModel.mayList),
-      _monthlyListViewBuilder(_viewModel.juneList),
-      _monthlyListViewBuilder(_viewModel.julyList),
-      _monthlyListViewBuilder(_viewModel.augustList),
-      _monthlyListViewBuilder(_viewModel.septemberList),
-      _monthlyListViewBuilder(_viewModel.octoberList),
-      _monthlyListViewBuilder(_viewModel.novemberList),
-      _monthlyListViewBuilder(_viewModel.decemberList),
-    ]);
-  }
-
-  Observer _monthlyListViewBuilder(
-    ObservableList<InputModel> listName,
-  ) {
-    return Observer(builder: (_) {
-      return ListView.builder(
-        itemCount: listName.length,
-        itemBuilder: (context, index) => ListTile(
-          leading: Text(listName[index].category.toString()),
-          title: Text(listName[index].title),
-          subtitle: Text(listName[index].price.toString()),
-          trailing: Text(listName[index].createdTime.toString()),
-        ),
-      );
-    });
-  }
 }
-// Column(
-//                       children: [
-//                         Expanded(
-//                           child: Observer(builder: (_) {
-//                             return ListView.builder(
-//                               itemCount: _viewModel.inputList.length,
-//                               itemBuilder: (context, index) => Text(
-//                                 _viewModel.inputList[index].title,
-//                                 style: const TextStyle(color: Colors.white),
-//                               ),
-//                             );
-//                           }),
-//                         )
-//                       ],
-//                     )

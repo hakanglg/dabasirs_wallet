@@ -1,5 +1,5 @@
 import 'package:dabasirs_wallet/core/base/base_state.dart';
-import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
+import 'package:dabasirs_wallet/features/charts/view_model/charts_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
@@ -11,7 +11,7 @@ import '../../model/input_model.dart';
 import '../add_square_container/add_square.dart';
 
 class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
-  final HomeViewModel _viewModel = HomeViewModel();
+  final ChartsViewModel _viewModel = ChartsViewModel();
   TextEditingController titleController = TextEditingController();
   TextEditingController priceController = TextEditingController();
 // TODO Text savelemiyor onu çöz
