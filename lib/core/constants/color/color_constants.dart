@@ -5,7 +5,7 @@ class ColorConstants {
   ColorConstants._init();
 
   final blueExult = const Color(0xff2E2F43);
-  final caribbienGreen = const Color(0xff4CAF50);
+  final caribbienGreen = const Color(0xff1DB954);
   final shadyNeonBlue = const Color(0xff5450FC);
   final metroidRed = const Color(0xffE53935);
   final blueAngelsYellow = const Color(0xffF8B801);
@@ -15,3 +15,5 @@ class ColorConstants {
   final white = Colors.white;
   final grey = Colors.grey;
 }
+// final caribbienGreen = const Color(0xff4CAF50);
+  // final shadyNeonBlue = const Color(0xff264b96);

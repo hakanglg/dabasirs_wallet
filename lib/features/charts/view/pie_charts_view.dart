@@ -9,22 +9,20 @@ import 'package:kartal/kartal.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 import '../../../../core/constants/enums/category_enum.dart';
+import '../../../product/components/list_tile/expenses_list_tile.dart';
+import '../../../product/components/list_tile/saving_list_tile.dart';
 
 part "../view_model/pie_charts_view_model.dart";
 
 class PieChartsView extends StatelessWidget with BaseState {
-  final double monthExpensesTotal,
-      monthIncomeTotal,
-      monthSavingTotal,
-      monthStuffTotal;
+  final double monthIncomeTotal, monthExpensesTotal, monthSavingTotal;
 
-  PieChartsView(
-      {Key? key,
-      this.monthExpensesTotal = 2,
-      this.monthIncomeTotal = 7,
-      this.monthSavingTotal = 2,
-      this.monthStuffTotal = 1})
-      : super(key: key);
+  PieChartsView({
+    Key? key,
+    required this.monthIncomeTotal,
+    required this.monthExpensesTotal,
+    required this.monthSavingTotal,
+  }) : super(key: key);
 
   final _PieChartsViewModel _viewModel = _PieChartsViewModel();
   final double animationDuration = 1000;
@@ -39,8 +37,6 @@ class PieChartsView extends StatelessWidget with BaseState {
           ColorConstants.instance.metroidRed),
       ChartData(Category.Savings.name, monthSavingTotal,
           ColorConstants.instance.shadyNeonBlue),
-      ChartData(Category.Stuffs.name, monthStuffTotal,
-          ColorConstants.instance.blueAngelsYellow),
     ];
 
     return Column(
@@ -48,24 +44,27 @@ class PieChartsView extends StatelessWidget with BaseState {
         _PieChart(context, chartData),
         IncomePercentListTile(
             percents: _viewModel
-                .findPercent(monthIncomeTotal, monthExpensesTotal,
-                    monthSavingTotal, monthIncomeTotal, monthStuffTotal)
+                .findPercent(
+                  monthIncomeTotal,
+                  monthExpensesTotal,
+                  monthSavingTotal,
+                  monthIncomeTotal,
+                )
                 .toInt()),
-        // ExpensesPercentListTile(
-        //     percents: _viewModel
-        //         .findPercent(monthExpensesTotal, monthExpensesTotal,
-        //             monthSavingTotal, monthIncomeTotal, monthStuffTotal)
-        //         .toInt()),
-        // SavingsPercentListTile(
-        //     percents: _viewModel
-        //         .findPercent(monthSavingTotal, monthExpensesTotal,
-        //             monthSavingTotal, monthIncomeTotal, monthStuffTotal)
-        //         .toInt()),
-        // StuffsPercentListTile(
-        //     percents: _viewModel
-        //         .findPercent(monthStuffTotal, monthExpensesTotal,
-        //             monthSavingTotal, monthIncomeTotal, monthStuffTotal)
-        //         .toInt()),
+        ExpensesPercentListTile(
+            percents: _viewModel
+                .findPercent(
+                  monthExpensesTotal,
+                  monthExpensesTotal,
+                  monthSavingTotal,
+                  monthIncomeTotal,
+                )
+                .toInt()),
+        SavingsPercentListTile(
+            percents: _viewModel
+                .findPercent(monthSavingTotal, monthExpensesTotal,
+                    monthSavingTotal, monthIncomeTotal)
+                .toInt()),
       ],
     );
   }
@@ -96,7 +95,7 @@ class PieChartsView extends StatelessWidget with BaseState {
 
   TextStyle _pieChartTextStyle(BuildContext context) {
     return TextStyle(
-      fontSize: context.dynamicHeight(.02),
+      fontSize: context.dynamicHeight(.01),
       fontWeight: FontWeight.bold,
       color: Colors.white,
     );
@@ -104,7 +103,7 @@ class PieChartsView extends StatelessWidget with BaseState {
 }
 
 class ChartData {
-  ChartData(this.x, this.y, [this.color]);
+  ChartData(this.x, this.y, this.color);
   final String x;
   final double y;
   final Color? color;

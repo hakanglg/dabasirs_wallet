@@ -1,1 +1,1 @@
-enum Category { Income, Expenses, Savings, Stuffs }
+enum Category { Income, Expenses, Savings }

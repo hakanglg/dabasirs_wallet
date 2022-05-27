@@ -74,22 +74,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
     });
   }
 
-  late final _$januaryStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.januaryStuffsTotal', context: context);
-
-  @override
-  double get januaryStuffsTotal {
-    _$januaryStuffsTotalAtom.reportRead();
-    return super.januaryStuffsTotal;
-  }
-
-  @override
-  set januaryStuffsTotal(double value) {
-    _$januaryStuffsTotalAtom.reportWrite(value, super.januaryStuffsTotal, () {
-      super.januaryStuffsTotal = value;
-    });
-  }
-
   late final _$februaryListAtom =
       Atom(name: '_MonthsViewModelBase.februaryList', context: context);
 
@@ -153,22 +137,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
     _$februarySavingsTotalAtom.reportWrite(value, super.februarySavingsTotal,
         () {
       super.februarySavingsTotal = value;
-    });
-  }
-
-  late final _$februaryStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.februaryStuffsTotal', context: context);
-
-  @override
-  double get februaryStuffsTotal {
-    _$februaryStuffsTotalAtom.reportRead();
-    return super.februaryStuffsTotal;
-  }
-
-  @override
-  set februaryStuffsTotal(double value) {
-    _$februaryStuffsTotalAtom.reportWrite(value, super.februaryStuffsTotal, () {
-      super.februaryStuffsTotal = value;
     });
   }
 
@@ -236,22 +204,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
     });
   }
 
-  late final _$marchStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.marchStuffsTotal', context: context);
-
-  @override
-  double get marchStuffsTotal {
-    _$marchStuffsTotalAtom.reportRead();
-    return super.marchStuffsTotal;
-  }
-
-  @override
-  set marchStuffsTotal(double value) {
-    _$marchStuffsTotalAtom.reportWrite(value, super.marchStuffsTotal, () {
-      super.marchStuffsTotal = value;
-    });
-  }
-
   late final _$aprilListAtom =
       Atom(name: '_MonthsViewModelBase.aprilList', context: context);
 
@@ -313,22 +265,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
   set aprilSavingsTotal(double value) {
     _$aprilSavingsTotalAtom.reportWrite(value, super.aprilSavingsTotal, () {
       super.aprilSavingsTotal = value;
-    });
-  }
-
-  late final _$aprilStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.aprilStuffsTotal', context: context);
-
-  @override
-  double get aprilStuffsTotal {
-    _$aprilStuffsTotalAtom.reportRead();
-    return super.aprilStuffsTotal;
-  }
-
-  @override
-  set aprilStuffsTotal(double value) {
-    _$aprilStuffsTotalAtom.reportWrite(value, super.aprilStuffsTotal, () {
-      super.aprilStuffsTotal = value;
     });
   }
 
@@ -396,22 +332,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
     });
   }
 
-  late final _$mayStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.mayStuffsTotal', context: context);
-
-  @override
-  double get mayStuffsTotal {
-    _$mayStuffsTotalAtom.reportRead();
-    return super.mayStuffsTotal;
-  }
-
-  @override
-  set mayStuffsTotal(double value) {
-    _$mayStuffsTotalAtom.reportWrite(value, super.mayStuffsTotal, () {
-      super.mayStuffsTotal = value;
-    });
-  }
-
   late final _$juneListAtom =
       Atom(name: '_MonthsViewModelBase.juneList', context: context);
 
@@ -473,22 +393,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
   set juneSavingsTotal(double value) {
     _$juneSavingsTotalAtom.reportWrite(value, super.juneSavingsTotal, () {
       super.juneSavingsTotal = value;
-    });
-  }
-
-  late final _$juneStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.juneStuffsTotal', context: context);
-
-  @override
-  double get juneStuffsTotal {
-    _$juneStuffsTotalAtom.reportRead();
-    return super.juneStuffsTotal;
-  }
-
-  @override
-  set juneStuffsTotal(double value) {
-    _$juneStuffsTotalAtom.reportWrite(value, super.juneStuffsTotal, () {
-      super.juneStuffsTotal = value;
     });
   }
 
@@ -556,22 +460,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
     });
   }
 
-  late final _$julyStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.julyStuffsTotal', context: context);
-
-  @override
-  double get julyStuffsTotal {
-    _$julyStuffsTotalAtom.reportRead();
-    return super.julyStuffsTotal;
-  }
-
-  @override
-  set julyStuffsTotal(double value) {
-    _$julyStuffsTotalAtom.reportWrite(value, super.julyStuffsTotal, () {
-      super.julyStuffsTotal = value;
-    });
-  }
-
   late final _$augustListAtom =
       Atom(name: '_MonthsViewModelBase.augustList', context: context);
 
@@ -633,22 +521,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
   set augustSavingsTotal(double value) {
     _$augustSavingsTotalAtom.reportWrite(value, super.augustSavingsTotal, () {
       super.augustSavingsTotal = value;
-    });
-  }
-
-  late final _$augustStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.augustStuffsTotal', context: context);
-
-  @override
-  double get augustStuffsTotal {
-    _$augustStuffsTotalAtom.reportRead();
-    return super.augustStuffsTotal;
-  }
-
-  @override
-  set augustStuffsTotal(double value) {
-    _$augustStuffsTotalAtom.reportWrite(value, super.augustStuffsTotal, () {
-      super.augustStuffsTotal = value;
     });
   }
 
@@ -719,23 +591,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
     });
   }
 
-  late final _$septemberStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.septemberStuffsTotal', context: context);
-
-  @override
-  double get septemberStuffsTotal {
-    _$septemberStuffsTotalAtom.reportRead();
-    return super.septemberStuffsTotal;
-  }
-
-  @override
-  set septemberStuffsTotal(double value) {
-    _$septemberStuffsTotalAtom.reportWrite(value, super.septemberStuffsTotal,
-        () {
-      super.septemberStuffsTotal = value;
-    });
-  }
-
   late final _$octoberListAtom =
       Atom(name: '_MonthsViewModelBase.octoberList', context: context);
 
@@ -798,22 +653,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
   set octoberSavingsTotal(double value) {
     _$octoberSavingsTotalAtom.reportWrite(value, super.octoberSavingsTotal, () {
       super.octoberSavingsTotal = value;
-    });
-  }
-
-  late final _$octoberStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.octoberStuffsTotal', context: context);
-
-  @override
-  double get octoberStuffsTotal {
-    _$octoberStuffsTotalAtom.reportRead();
-    return super.octoberStuffsTotal;
-  }
-
-  @override
-  set octoberStuffsTotal(double value) {
-    _$octoberStuffsTotalAtom.reportWrite(value, super.octoberStuffsTotal, () {
-      super.octoberStuffsTotal = value;
     });
   }
 
@@ -883,22 +722,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
     });
   }
 
-  late final _$novemberStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.novemberStuffsTotal', context: context);
-
-  @override
-  double get novemberStuffsTotal {
-    _$novemberStuffsTotalAtom.reportRead();
-    return super.novemberStuffsTotal;
-  }
-
-  @override
-  set novemberStuffsTotal(double value) {
-    _$novemberStuffsTotalAtom.reportWrite(value, super.novemberStuffsTotal, () {
-      super.novemberStuffsTotal = value;
-    });
-  }
-
   late final _$decemberListAtom =
       Atom(name: '_MonthsViewModelBase.decemberList', context: context);
 
@@ -965,22 +788,6 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
     });
   }
 
-  late final _$decemberStuffsTotalAtom =
-      Atom(name: '_MonthsViewModelBase.decemberStuffsTotal', context: context);
-
-  @override
-  double get decemberStuffsTotal {
-    _$decemberStuffsTotalAtom.reportRead();
-    return super.decemberStuffsTotal;
-  }
-
-  @override
-  set decemberStuffsTotal(double value) {
-    _$decemberStuffsTotalAtom.reportWrite(value, super.decemberStuffsTotal, () {
-      super.decemberStuffsTotal = value;
-    });
-  }
-
   late final _$_MonthsViewModelBaseActionController =
       ActionController(name: '_MonthsViewModelBase', context: context);
 
@@ -1007,13 +814,12 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
   }
 
   @override
-  void addToCategoryByMonth(InputModel inputModel, double income,
-      double expenses, double savings, double stuffs) {
+  void addToCategoryByMonth(
+      InputModel inputModel, double income, double expenses, double savings) {
     final _$actionInfo = _$_MonthsViewModelBaseActionController.startAction(
         name: '_MonthsViewModelBase.addToCategoryByMonth');
     try {
-      return super
-          .addToCategoryByMonth(inputModel, income, expenses, savings, stuffs);
+      return super.addToCategoryByMonth(inputModel, income, expenses, savings);
     } finally {
       _$_MonthsViewModelBaseActionController.endAction(_$actionInfo);
     }
@@ -1026,62 +832,50 @@ januaryList: ${januaryList},
 januaryExpensesTotal: ${januaryExpensesTotal},
 januaryIncomeTotal: ${januaryIncomeTotal},
 januarySavingsTotal: ${januarySavingsTotal},
-januaryStuffsTotal: ${januaryStuffsTotal},
 februaryList: ${februaryList},
 februaryExpensesTotal: ${februaryExpensesTotal},
 februaryIncomeTotal: ${februaryIncomeTotal},
 februarySavingsTotal: ${februarySavingsTotal},
-februaryStuffsTotal: ${februaryStuffsTotal},
 marchList: ${marchList},
 marchExpensesTotal: ${marchExpensesTotal},
 marchIncomeTotal: ${marchIncomeTotal},
 marchSavingsTotal: ${marchSavingsTotal},
-marchStuffsTotal: ${marchStuffsTotal},
 aprilList: ${aprilList},
 aprilExpensesTotal: ${aprilExpensesTotal},
 aprilIncomeTotal: ${aprilIncomeTotal},
 aprilSavingsTotal: ${aprilSavingsTotal},
-aprilStuffsTotal: ${aprilStuffsTotal},
 mayList: ${mayList},
 mayExpensesTotal: ${mayExpensesTotal},
 mayIncomeTotal: ${mayIncomeTotal},
 maySavingsTotal: ${maySavingsTotal},
-mayStuffsTotal: ${mayStuffsTotal},
 juneList: ${juneList},
 juneExpensesTotal: ${juneExpensesTotal},
 juneIncomeTotal: ${juneIncomeTotal},
 juneSavingsTotal: ${juneSavingsTotal},
-juneStuffsTotal: ${juneStuffsTotal},
 julyList: ${julyList},
 julyExpensesTotal: ${julyExpensesTotal},
 julyIncomeTotal: ${julyIncomeTotal},
 julySavingsTotal: ${julySavingsTotal},
-julyStuffsTotal: ${julyStuffsTotal},
 augustList: ${augustList},
 augustExpensesTotal: ${augustExpensesTotal},
 augustIncomeTotal: ${augustIncomeTotal},
 augustSavingsTotal: ${augustSavingsTotal},
-augustStuffsTotal: ${augustStuffsTotal},
 septemberList: ${septemberList},
 septemberExpensesTotal: ${septemberExpensesTotal},
 septemberIncomeTotal: ${septemberIncomeTotal},
 septemberSavingsTotal: ${septemberSavingsTotal},
-septemberStuffsTotal: ${septemberStuffsTotal},
 octoberList: ${octoberList},
 octoberExpensesTotal: ${octoberExpensesTotal},
 octoberIncomeTotal: ${octoberIncomeTotal},
 octoberSavingsTotal: ${octoberSavingsTotal},
-octoberStuffsTotal: ${octoberStuffsTotal},
 novemberList: ${novemberList},
 novemberExpensesTotal: ${novemberExpensesTotal},
 novemberIncomeTotal: ${novemberIncomeTotal},
 novemberSavingsTotal: ${novemberSavingsTotal},
-novemberStuffsTotal: ${novemberStuffsTotal},
 decemberList: ${decemberList},
 decemberExpensesTotal: ${decemberExpensesTotal},
 decemberIncomeTotal: ${decemberIncomeTotal},
-decemberSavingsTotal: ${decemberSavingsTotal},
-decemberStuffsTotal: ${decemberStuffsTotal}
+decemberSavingsTotal: ${decemberSavingsTotal}
     ''';
   }
 }

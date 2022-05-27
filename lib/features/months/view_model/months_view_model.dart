@@ -1,5 +1,4 @@
 import 'package:mobx/mobx.dart';
-
 import '../../../core/constants/enums/category_enum.dart';
 import '../../../product/model/input_model.dart';
 
@@ -16,8 +15,6 @@ abstract class _MonthsViewModelBase with Store {
   double januaryIncomeTotal = 0;
   @observable
   double januarySavingsTotal = 0;
-  @observable
-  double januaryStuffsTotal = 0;
 
   // FEBRUARY
   @observable
@@ -28,8 +25,6 @@ abstract class _MonthsViewModelBase with Store {
   double februaryIncomeTotal = 0;
   @observable
   double februarySavingsTotal = 0;
-  @observable
-  double februaryStuffsTotal = 0;
 
   // MARCH
   @observable
@@ -40,8 +35,6 @@ abstract class _MonthsViewModelBase with Store {
   double marchIncomeTotal = 0;
   @observable
   double marchSavingsTotal = 0;
-  @observable
-  double marchStuffsTotal = 0;
 
   // APRIL
   @observable
@@ -52,8 +45,6 @@ abstract class _MonthsViewModelBase with Store {
   double aprilIncomeTotal = 0;
   @observable
   double aprilSavingsTotal = 0;
-  @observable
-  double aprilStuffsTotal = 0;
 
   // MAY
   @observable
@@ -65,8 +56,6 @@ abstract class _MonthsViewModelBase with Store {
   double mayIncomeTotal = 10000;
   @observable
   double maySavingsTotal = 1000;
-  @observable
-  double mayStuffsTotal = 1000;
 
   // JUNE
   @observable
@@ -78,8 +67,6 @@ abstract class _MonthsViewModelBase with Store {
   double juneIncomeTotal = 0;
   @observable
   double juneSavingsTotal = 0;
-  @observable
-  double juneStuffsTotal = 0;
 
   // JULY
   @observable
@@ -90,11 +77,9 @@ abstract class _MonthsViewModelBase with Store {
   double julyIncomeTotal = 0;
   @observable
   double julySavingsTotal = 0;
-  @observable
-  double julyStuffsTotal = 0;
-  @observable
 
   // AUGUST
+  @observable
   ObservableList<InputModel> augustList = ObservableList<InputModel>();
   @observable
   double augustExpensesTotal = 1000;
@@ -102,8 +87,6 @@ abstract class _MonthsViewModelBase with Store {
   double augustIncomeTotal = 7000;
   @observable
   double augustSavingsTotal = 2000;
-  @observable
-  double augustStuffsTotal = 1000;
 
   // SEPTEMBER
   @observable
@@ -114,8 +97,6 @@ abstract class _MonthsViewModelBase with Store {
   double septemberIncomeTotal = 10000;
   @observable
   double septemberSavingsTotal = 2000;
-  @observable
-  double septemberStuffsTotal = 1000;
 
   // OCTOBER
   @observable
@@ -126,8 +107,6 @@ abstract class _MonthsViewModelBase with Store {
   double octoberIncomeTotal = 0;
   @observable
   double octoberSavingsTotal = 0;
-  @observable
-  double octoberStuffsTotal = 0;
 
   // NOVEMBER
   @observable
@@ -138,8 +117,6 @@ abstract class _MonthsViewModelBase with Store {
   double novemberIncomeTotal = 0;
   @observable
   double novemberSavingsTotal = 0;
-  @observable
-  double novemberStuffsTotal = 0;
 
   // DECEMBER
   @observable
@@ -150,75 +127,117 @@ abstract class _MonthsViewModelBase with Store {
   double decemberIncomeTotal = 0;
   @observable
   double decemberSavingsTotal = 0;
-  @observable
-  double decemberStuffsTotal = 0;
 
   @action
   void addInputList(InputModel inputModel) {
     switch (inputModel.createdTime.month) {
       case DateTime.january:
         addToList(januaryList, inputModel);
-        addToCategoryByMonth(inputModel, januaryIncomeTotal,
-            januaryExpensesTotal, januarySavingsTotal, januaryStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          januaryIncomeTotal,
+          januaryExpensesTotal,
+          januarySavingsTotal,
+        );
         break;
       case DateTime.february:
         addToList(februaryList, inputModel);
-        addToCategoryByMonth(inputModel, februaryIncomeTotal,
-            februaryExpensesTotal, februarySavingsTotal, februaryStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          februaryIncomeTotal,
+          februaryExpensesTotal,
+          februarySavingsTotal,
+        );
         break;
       case DateTime.march:
         addToList(marchList, inputModel);
-        addToCategoryByMonth(inputModel, marchIncomeTotal, marchExpensesTotal,
-            marchSavingsTotal, marchStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          marchIncomeTotal,
+          marchExpensesTotal,
+          marchSavingsTotal,
+        );
         break;
       case DateTime.april:
         addToList(aprilList, inputModel);
-        addToCategoryByMonth(inputModel, aprilIncomeTotal, aprilExpensesTotal,
-            aprilSavingsTotal, aprilStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          aprilIncomeTotal,
+          aprilExpensesTotal,
+          aprilSavingsTotal,
+        );
         break;
       case DateTime.may:
         addToList(mayList, inputModel);
-        addToCategoryByMonth(inputModel, mayIncomeTotal, mayExpensesTotal,
-            maySavingsTotal, mayStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          mayIncomeTotal,
+          mayExpensesTotal,
+          maySavingsTotal,
+        );
         break;
       case DateTime.june:
         addToList(juneList, inputModel);
-        addToCategoryByMonth(inputModel, juneIncomeTotal, juneExpensesTotal,
-            juneSavingsTotal, juneStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          juneIncomeTotal,
+          juneExpensesTotal,
+          juneSavingsTotal,
+        );
         break;
       case DateTime.july:
         addToList(julyList, inputModel);
-        addToCategoryByMonth(inputModel, julyIncomeTotal, julyExpensesTotal,
-            julySavingsTotal, julyStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          julyIncomeTotal,
+          julyExpensesTotal,
+          julySavingsTotal,
+        );
         break;
       case DateTime.august:
         addToList(augustList, inputModel);
-        addToCategoryByMonth(inputModel, augustIncomeTotal, augustExpensesTotal,
-            augustSavingsTotal, augustStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          augustIncomeTotal,
+          augustExpensesTotal,
+          augustSavingsTotal,
+        );
         break;
       case DateTime.september:
         addToList(septemberList, inputModel);
         addToCategoryByMonth(
-            inputModel,
-            septemberIncomeTotal,
-            septemberExpensesTotal,
-            septemberSavingsTotal,
-            septemberStuffsTotal);
+          inputModel,
+          septemberIncomeTotal,
+          septemberExpensesTotal,
+          septemberSavingsTotal,
+        );
         break;
       case DateTime.october:
         addToList(octoberList, inputModel);
-        addToCategoryByMonth(inputModel, octoberIncomeTotal,
-            octoberExpensesTotal, octoberSavingsTotal, octoberStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          octoberIncomeTotal,
+          octoberExpensesTotal,
+          octoberSavingsTotal,
+        );
         break;
       case DateTime.november:
         addToList(novemberList, inputModel);
-        addToCategoryByMonth(inputModel, novemberIncomeTotal,
-            novemberExpensesTotal, novemberSavingsTotal, novemberStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          novemberIncomeTotal,
+          novemberExpensesTotal,
+          novemberSavingsTotal,
+        );
         break;
       case DateTime.december:
         addToList(decemberList, inputModel);
-        addToCategoryByMonth(inputModel, decemberIncomeTotal,
-            decemberExpensesTotal, decemberSavingsTotal, decemberStuffsTotal);
+        addToCategoryByMonth(
+          inputModel,
+          decemberIncomeTotal,
+          decemberExpensesTotal,
+          decemberSavingsTotal,
+        );
         break;
 
       default:
@@ -233,8 +252,12 @@ abstract class _MonthsViewModelBase with Store {
   }
 
   @action
-  void addToCategoryByMonth(InputModel inputModel, double income,
-      double expenses, double savings, double stuffs) {
+  void addToCategoryByMonth(
+    InputModel inputModel,
+    double income,
+    double expenses,
+    double savings,
+  ) {
     switch (inputModel.category) {
       case Category.Income:
         income += inputModel.price;
@@ -244,9 +267,6 @@ abstract class _MonthsViewModelBase with Store {
         break;
       case Category.Savings:
         savings += inputModel.price;
-        break;
-      case Category.Stuffs:
-        stuffs += inputModel.price;
         break;
     }
   }

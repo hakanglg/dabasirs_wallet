@@ -1,13 +1,8 @@
 import '../../../core/base/base_state.dart';
 import '../../../core/components/container/custom_square.dart';
-import '../../../features/home/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
 
-import '../../../features/home/view_model/home_view_model.dart';
-
 class AddSquare extends StatelessWidget with BaseState {
-  final HomeViewModel _viewModel = HomeViewModel();
-
   final Color color;
   final String category;
   final VoidCallback onTap;
