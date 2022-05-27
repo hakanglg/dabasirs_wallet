@@ -1,6 +1,6 @@
-import 'package:dabasirs_wallet/core/base/base_state.dart';
-import 'package:dabasirs_wallet/core/components/container/custom_square.dart';
-import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
+import '../../../core/base/base_state.dart';
+import '../../../core/components/container/custom_square.dart';
+import '../../../features/home/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../features/home/view_model/home_view_model.dart';

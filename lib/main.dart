@@ -1,6 +1,6 @@
-import 'package:dabasirs_wallet/core/init/theme/my_theme.dart';
-import 'package:dabasirs_wallet/features/home/view/home_view.dart';
-import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
+import 'core/init/theme/my_theme.dart';
+import 'features/home/view/home_view.dart';
+import 'features/home/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/services.dart';

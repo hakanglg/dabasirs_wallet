@@ -3,11 +3,11 @@ import 'package:mobx/mobx.dart';
 import '../../../core/constants/enums/category_enum.dart';
 import '../../../product/model/input_model.dart';
 
-part 'charts_view_model.g.dart';
+part 'months_view_model.g.dart';
 
-class ChartsViewModel = _ChartsViewModelBase with _$ChartsViewModel;
+class MonthsViewModel = _MonthsViewModelBase with _$MonthsViewModel;
 
-abstract class _ChartsViewModelBase with Store {
+abstract class _MonthsViewModelBase with Store {
   @observable
   ObservableList<InputModel> januaryList = ObservableList<InputModel>();
   @observable
@@ -97,13 +97,13 @@ abstract class _ChartsViewModelBase with Store {
   // AUGUST
   ObservableList<InputModel> augustList = ObservableList<InputModel>();
   @observable
-  double augustExpensesTotal = 20;
+  double augustExpensesTotal = 1000;
   @observable
-  double augustIncomeTotal = 50;
+  double augustIncomeTotal = 7000;
   @observable
-  double augustSavingsTotal = 20;
+  double augustSavingsTotal = 2000;
   @observable
-  double augustStuffsTotal = 10;
+  double augustStuffsTotal = 1000;
 
   // SEPTEMBER
   @observable

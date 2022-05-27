@@ -1,7 +1,7 @@
-import 'package:dabasirs_wallet/core/base/base_state.dart';
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
+import '../../../core/base/base_state.dart';
 import '../../../product/lang/language.dart';
 
 class AppBarTitleRichText extends StatelessWidget with BaseState {

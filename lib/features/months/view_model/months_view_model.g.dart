@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'charts_view_model.dart';
+part of 'months_view_model.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,9 +8,9 @@ part of 'charts_view_model.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
+mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
   late final _$januaryListAtom =
-      Atom(name: '_ChartsViewModelBase.januaryList', context: context);
+      Atom(name: '_MonthsViewModelBase.januaryList', context: context);
 
   @override
   ObservableList<InputModel> get januaryList {
@@ -26,7 +26,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$januaryExpensesTotalAtom =
-      Atom(name: '_ChartsViewModelBase.januaryExpensesTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.januaryExpensesTotal', context: context);
 
   @override
   double get januaryExpensesTotal {
@@ -43,7 +43,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$januaryIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.januaryIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.januaryIncomeTotal', context: context);
 
   @override
   double get januaryIncomeTotal {
@@ -59,7 +59,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$januarySavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.januarySavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.januarySavingsTotal', context: context);
 
   @override
   double get januarySavingsTotal {
@@ -75,7 +75,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$januaryStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.januaryStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.januaryStuffsTotal', context: context);
 
   @override
   double get januaryStuffsTotal {
@@ -91,7 +91,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$februaryListAtom =
-      Atom(name: '_ChartsViewModelBase.februaryList', context: context);
+      Atom(name: '_MonthsViewModelBase.februaryList', context: context);
 
   @override
   ObservableList<InputModel> get februaryList {
@@ -107,7 +107,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$februaryExpensesTotalAtom = Atom(
-      name: '_ChartsViewModelBase.februaryExpensesTotal', context: context);
+      name: '_MonthsViewModelBase.februaryExpensesTotal', context: context);
 
   @override
   double get februaryExpensesTotal {
@@ -124,7 +124,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$februaryIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.februaryIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.februaryIncomeTotal', context: context);
 
   @override
   double get februaryIncomeTotal {
@@ -140,7 +140,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$februarySavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.februarySavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.februarySavingsTotal', context: context);
 
   @override
   double get februarySavingsTotal {
@@ -157,7 +157,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$februaryStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.februaryStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.februaryStuffsTotal', context: context);
 
   @override
   double get februaryStuffsTotal {
@@ -173,7 +173,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$marchListAtom =
-      Atom(name: '_ChartsViewModelBase.marchList', context: context);
+      Atom(name: '_MonthsViewModelBase.marchList', context: context);
 
   @override
   ObservableList<InputModel> get marchList {
@@ -189,7 +189,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$marchExpensesTotalAtom =
-      Atom(name: '_ChartsViewModelBase.marchExpensesTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.marchExpensesTotal', context: context);
 
   @override
   double get marchExpensesTotal {
@@ -205,7 +205,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$marchIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.marchIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.marchIncomeTotal', context: context);
 
   @override
   double get marchIncomeTotal {
@@ -221,7 +221,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$marchSavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.marchSavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.marchSavingsTotal', context: context);
 
   @override
   double get marchSavingsTotal {
@@ -237,7 +237,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$marchStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.marchStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.marchStuffsTotal', context: context);
 
   @override
   double get marchStuffsTotal {
@@ -253,7 +253,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$aprilListAtom =
-      Atom(name: '_ChartsViewModelBase.aprilList', context: context);
+      Atom(name: '_MonthsViewModelBase.aprilList', context: context);
 
   @override
   ObservableList<InputModel> get aprilList {
@@ -269,7 +269,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$aprilExpensesTotalAtom =
-      Atom(name: '_ChartsViewModelBase.aprilExpensesTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.aprilExpensesTotal', context: context);
 
   @override
   double get aprilExpensesTotal {
@@ -285,7 +285,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$aprilIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.aprilIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.aprilIncomeTotal', context: context);
 
   @override
   double get aprilIncomeTotal {
@@ -301,7 +301,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$aprilSavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.aprilSavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.aprilSavingsTotal', context: context);
 
   @override
   double get aprilSavingsTotal {
@@ -317,7 +317,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$aprilStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.aprilStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.aprilStuffsTotal', context: context);
 
   @override
   double get aprilStuffsTotal {
@@ -333,7 +333,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$mayListAtom =
-      Atom(name: '_ChartsViewModelBase.mayList', context: context);
+      Atom(name: '_MonthsViewModelBase.mayList', context: context);
 
   @override
   ObservableList<InputModel> get mayList {
@@ -349,7 +349,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$mayExpensesTotalAtom =
-      Atom(name: '_ChartsViewModelBase.mayExpensesTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.mayExpensesTotal', context: context);
 
   @override
   double get mayExpensesTotal {
@@ -365,7 +365,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$mayIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.mayIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.mayIncomeTotal', context: context);
 
   @override
   double get mayIncomeTotal {
@@ -381,7 +381,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$maySavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.maySavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.maySavingsTotal', context: context);
 
   @override
   double get maySavingsTotal {
@@ -397,7 +397,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$mayStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.mayStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.mayStuffsTotal', context: context);
 
   @override
   double get mayStuffsTotal {
@@ -413,7 +413,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$juneListAtom =
-      Atom(name: '_ChartsViewModelBase.juneList', context: context);
+      Atom(name: '_MonthsViewModelBase.juneList', context: context);
 
   @override
   ObservableList<InputModel> get juneList {
@@ -429,7 +429,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$juneExpensesTotalAtom =
-      Atom(name: '_ChartsViewModelBase.juneExpensesTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.juneExpensesTotal', context: context);
 
   @override
   double get juneExpensesTotal {
@@ -445,7 +445,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$juneIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.juneIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.juneIncomeTotal', context: context);
 
   @override
   double get juneIncomeTotal {
@@ -461,7 +461,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$juneSavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.juneSavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.juneSavingsTotal', context: context);
 
   @override
   double get juneSavingsTotal {
@@ -477,7 +477,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$juneStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.juneStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.juneStuffsTotal', context: context);
 
   @override
   double get juneStuffsTotal {
@@ -493,7 +493,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$julyListAtom =
-      Atom(name: '_ChartsViewModelBase.julyList', context: context);
+      Atom(name: '_MonthsViewModelBase.julyList', context: context);
 
   @override
   ObservableList<InputModel> get julyList {
@@ -509,7 +509,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$julyExpensesTotalAtom =
-      Atom(name: '_ChartsViewModelBase.julyExpensesTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.julyExpensesTotal', context: context);
 
   @override
   double get julyExpensesTotal {
@@ -525,7 +525,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$julyIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.julyIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.julyIncomeTotal', context: context);
 
   @override
   double get julyIncomeTotal {
@@ -541,7 +541,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$julySavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.julySavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.julySavingsTotal', context: context);
 
   @override
   double get julySavingsTotal {
@@ -557,7 +557,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$julyStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.julyStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.julyStuffsTotal', context: context);
 
   @override
   double get julyStuffsTotal {
@@ -573,7 +573,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$augustListAtom =
-      Atom(name: '_ChartsViewModelBase.augustList', context: context);
+      Atom(name: '_MonthsViewModelBase.augustList', context: context);
 
   @override
   ObservableList<InputModel> get augustList {
@@ -589,7 +589,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$augustExpensesTotalAtom =
-      Atom(name: '_ChartsViewModelBase.augustExpensesTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.augustExpensesTotal', context: context);
 
   @override
   double get augustExpensesTotal {
@@ -605,7 +605,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$augustIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.augustIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.augustIncomeTotal', context: context);
 
   @override
   double get augustIncomeTotal {
@@ -621,7 +621,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$augustSavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.augustSavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.augustSavingsTotal', context: context);
 
   @override
   double get augustSavingsTotal {
@@ -637,7 +637,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$augustStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.augustStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.augustStuffsTotal', context: context);
 
   @override
   double get augustStuffsTotal {
@@ -653,7 +653,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$septemberListAtom =
-      Atom(name: '_ChartsViewModelBase.septemberList', context: context);
+      Atom(name: '_MonthsViewModelBase.septemberList', context: context);
 
   @override
   ObservableList<InputModel> get septemberList {
@@ -669,7 +669,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$septemberExpensesTotalAtom = Atom(
-      name: '_ChartsViewModelBase.septemberExpensesTotal', context: context);
+      name: '_MonthsViewModelBase.septemberExpensesTotal', context: context);
 
   @override
   double get septemberExpensesTotal {
@@ -686,7 +686,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$septemberIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.septemberIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.septemberIncomeTotal', context: context);
 
   @override
   double get septemberIncomeTotal {
@@ -703,7 +703,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$septemberSavingsTotalAtom = Atom(
-      name: '_ChartsViewModelBase.septemberSavingsTotal', context: context);
+      name: '_MonthsViewModelBase.septemberSavingsTotal', context: context);
 
   @override
   double get septemberSavingsTotal {
@@ -720,7 +720,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$septemberStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.septemberStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.septemberStuffsTotal', context: context);
 
   @override
   double get septemberStuffsTotal {
@@ -737,7 +737,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$octoberListAtom =
-      Atom(name: '_ChartsViewModelBase.octoberList', context: context);
+      Atom(name: '_MonthsViewModelBase.octoberList', context: context);
 
   @override
   ObservableList<InputModel> get octoberList {
@@ -753,7 +753,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$octoberExpensesTotalAtom =
-      Atom(name: '_ChartsViewModelBase.octoberExpensesTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.octoberExpensesTotal', context: context);
 
   @override
   double get octoberExpensesTotal {
@@ -770,7 +770,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$octoberIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.octoberIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.octoberIncomeTotal', context: context);
 
   @override
   double get octoberIncomeTotal {
@@ -786,7 +786,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$octoberSavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.octoberSavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.octoberSavingsTotal', context: context);
 
   @override
   double get octoberSavingsTotal {
@@ -802,7 +802,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$octoberStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.octoberStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.octoberStuffsTotal', context: context);
 
   @override
   double get octoberStuffsTotal {
@@ -818,7 +818,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$novemberListAtom =
-      Atom(name: '_ChartsViewModelBase.novemberList', context: context);
+      Atom(name: '_MonthsViewModelBase.novemberList', context: context);
 
   @override
   ObservableList<InputModel> get novemberList {
@@ -834,7 +834,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$novemberExpensesTotalAtom = Atom(
-      name: '_ChartsViewModelBase.novemberExpensesTotal', context: context);
+      name: '_MonthsViewModelBase.novemberExpensesTotal', context: context);
 
   @override
   double get novemberExpensesTotal {
@@ -851,7 +851,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$novemberIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.novemberIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.novemberIncomeTotal', context: context);
 
   @override
   double get novemberIncomeTotal {
@@ -867,7 +867,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$novemberSavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.novemberSavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.novemberSavingsTotal', context: context);
 
   @override
   double get novemberSavingsTotal {
@@ -884,7 +884,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$novemberStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.novemberStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.novemberStuffsTotal', context: context);
 
   @override
   double get novemberStuffsTotal {
@@ -900,7 +900,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$decemberListAtom =
-      Atom(name: '_ChartsViewModelBase.decemberList', context: context);
+      Atom(name: '_MonthsViewModelBase.decemberList', context: context);
 
   @override
   ObservableList<InputModel> get decemberList {
@@ -916,7 +916,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$decemberExpensesTotalAtom = Atom(
-      name: '_ChartsViewModelBase.decemberExpensesTotal', context: context);
+      name: '_MonthsViewModelBase.decemberExpensesTotal', context: context);
 
   @override
   double get decemberExpensesTotal {
@@ -933,7 +933,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$decemberIncomeTotalAtom =
-      Atom(name: '_ChartsViewModelBase.decemberIncomeTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.decemberIncomeTotal', context: context);
 
   @override
   double get decemberIncomeTotal {
@@ -949,7 +949,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$decemberSavingsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.decemberSavingsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.decemberSavingsTotal', context: context);
 
   @override
   double get decemberSavingsTotal {
@@ -966,7 +966,7 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
   }
 
   late final _$decemberStuffsTotalAtom =
-      Atom(name: '_ChartsViewModelBase.decemberStuffsTotal', context: context);
+      Atom(name: '_MonthsViewModelBase.decemberStuffsTotal', context: context);
 
   @override
   double get decemberStuffsTotal {
@@ -981,41 +981,41 @@ mixin _$ChartsViewModel on _ChartsViewModelBase, Store {
     });
   }
 
-  late final _$_ChartsViewModelBaseActionController =
-      ActionController(name: '_ChartsViewModelBase', context: context);
+  late final _$_MonthsViewModelBaseActionController =
+      ActionController(name: '_MonthsViewModelBase', context: context);
 
   @override
   void addInputList(InputModel inputModel) {
-    final _$actionInfo = _$_ChartsViewModelBaseActionController.startAction(
-        name: '_ChartsViewModelBase.addInputList');
+    final _$actionInfo = _$_MonthsViewModelBaseActionController.startAction(
+        name: '_MonthsViewModelBase.addInputList');
     try {
       return super.addInputList(inputModel);
     } finally {
-      _$_ChartsViewModelBaseActionController.endAction(_$actionInfo);
+      _$_MonthsViewModelBaseActionController.endAction(_$actionInfo);
     }
   }
 
   @override
   void addToList(ObservableList<InputModel> list, InputModel inputModel) {
-    final _$actionInfo = _$_ChartsViewModelBaseActionController.startAction(
-        name: '_ChartsViewModelBase.addToList');
+    final _$actionInfo = _$_MonthsViewModelBaseActionController.startAction(
+        name: '_MonthsViewModelBase.addToList');
     try {
       return super.addToList(list, inputModel);
     } finally {
-      _$_ChartsViewModelBaseActionController.endAction(_$actionInfo);
+      _$_MonthsViewModelBaseActionController.endAction(_$actionInfo);
     }
   }
 
   @override
   void addToCategoryByMonth(InputModel inputModel, double income,
       double expenses, double savings, double stuffs) {
-    final _$actionInfo = _$_ChartsViewModelBaseActionController.startAction(
-        name: '_ChartsViewModelBase.addToCategoryByMonth');
+    final _$actionInfo = _$_MonthsViewModelBaseActionController.startAction(
+        name: '_MonthsViewModelBase.addToCategoryByMonth');
     try {
       return super
           .addToCategoryByMonth(inputModel, income, expenses, savings, stuffs);
     } finally {
-      _$_ChartsViewModelBaseActionController.endAction(_$actionInfo);
+      _$_MonthsViewModelBaseActionController.endAction(_$actionInfo);
     }
   }
 

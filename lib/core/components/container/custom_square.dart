@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:dabasirs_wallet/core/base/base_state.dart';
+import '../../base/base_state.dart';
 
 class CustomSquare extends StatelessWidget with BaseState {
   final double? height;
