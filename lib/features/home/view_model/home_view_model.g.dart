@@ -29,13 +29,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.januaryExpensesTotal', context: context);
 
   @override
-  int get januaryExpensesTotal {
+  double get januaryExpensesTotal {
     _$januaryExpensesTotalAtom.reportRead();
     return super.januaryExpensesTotal;
   }
 
   @override
-  set januaryExpensesTotal(int value) {
+  set januaryExpensesTotal(double value) {
     _$januaryExpensesTotalAtom.reportWrite(value, super.januaryExpensesTotal,
         () {
       super.januaryExpensesTotal = value;
@@ -46,13 +46,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.januaryIncomeTotal', context: context);
 
   @override
-  int get januaryIncomeTotal {
+  double get januaryIncomeTotal {
     _$januaryIncomeTotalAtom.reportRead();
     return super.januaryIncomeTotal;
   }
 
   @override
-  set januaryIncomeTotal(int value) {
+  set januaryIncomeTotal(double value) {
     _$januaryIncomeTotalAtom.reportWrite(value, super.januaryIncomeTotal, () {
       super.januaryIncomeTotal = value;
     });
@@ -62,13 +62,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.januarySavingsTotal', context: context);
 
   @override
-  int get januarySavingsTotal {
+  double get januarySavingsTotal {
     _$januarySavingsTotalAtom.reportRead();
     return super.januarySavingsTotal;
   }
 
   @override
-  set januarySavingsTotal(int value) {
+  set januarySavingsTotal(double value) {
     _$januarySavingsTotalAtom.reportWrite(value, super.januarySavingsTotal, () {
       super.januarySavingsTotal = value;
     });
@@ -78,13 +78,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.januaryStuffsTotal', context: context);
 
   @override
-  int get januaryStuffsTotal {
+  double get januaryStuffsTotal {
     _$januaryStuffsTotalAtom.reportRead();
     return super.januaryStuffsTotal;
   }
 
   @override
-  set januaryStuffsTotal(int value) {
+  set januaryStuffsTotal(double value) {
     _$januaryStuffsTotalAtom.reportWrite(value, super.januaryStuffsTotal, () {
       super.januaryStuffsTotal = value;
     });
@@ -110,13 +110,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.februaryExpensesTotal', context: context);
 
   @override
-  int get februaryExpensesTotal {
+  double get februaryExpensesTotal {
     _$februaryExpensesTotalAtom.reportRead();
     return super.februaryExpensesTotal;
   }
 
   @override
-  set februaryExpensesTotal(int value) {
+  set februaryExpensesTotal(double value) {
     _$februaryExpensesTotalAtom.reportWrite(value, super.februaryExpensesTotal,
         () {
       super.februaryExpensesTotal = value;
@@ -127,13 +127,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.februaryIncomeTotal', context: context);
 
   @override
-  int get februaryIncomeTotal {
+  double get februaryIncomeTotal {
     _$februaryIncomeTotalAtom.reportRead();
     return super.februaryIncomeTotal;
   }
 
   @override
-  set februaryIncomeTotal(int value) {
+  set februaryIncomeTotal(double value) {
     _$februaryIncomeTotalAtom.reportWrite(value, super.februaryIncomeTotal, () {
       super.februaryIncomeTotal = value;
     });
@@ -143,13 +143,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.februarySavingsTotal', context: context);
 
   @override
-  int get februarySavingsTotal {
+  double get februarySavingsTotal {
     _$februarySavingsTotalAtom.reportRead();
     return super.februarySavingsTotal;
   }
 
   @override
-  set februarySavingsTotal(int value) {
+  set februarySavingsTotal(double value) {
     _$februarySavingsTotalAtom.reportWrite(value, super.februarySavingsTotal,
         () {
       super.februarySavingsTotal = value;
@@ -160,13 +160,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.februaryStuffsTotal', context: context);
 
   @override
-  int get februaryStuffsTotal {
+  double get februaryStuffsTotal {
     _$februaryStuffsTotalAtom.reportRead();
     return super.februaryStuffsTotal;
   }
 
   @override
-  set februaryStuffsTotal(int value) {
+  set februaryStuffsTotal(double value) {
     _$februaryStuffsTotalAtom.reportWrite(value, super.februaryStuffsTotal, () {
       super.februaryStuffsTotal = value;
     });
@@ -192,13 +192,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.marchExpensesTotal', context: context);
 
   @override
-  int get marchExpensesTotal {
+  double get marchExpensesTotal {
     _$marchExpensesTotalAtom.reportRead();
     return super.marchExpensesTotal;
   }
 
   @override
-  set marchExpensesTotal(int value) {
+  set marchExpensesTotal(double value) {
     _$marchExpensesTotalAtom.reportWrite(value, super.marchExpensesTotal, () {
       super.marchExpensesTotal = value;
     });
@@ -208,13 +208,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.marchIncomeTotal', context: context);
 
   @override
-  int get marchIncomeTotal {
+  double get marchIncomeTotal {
     _$marchIncomeTotalAtom.reportRead();
     return super.marchIncomeTotal;
   }
 
   @override
-  set marchIncomeTotal(int value) {
+  set marchIncomeTotal(double value) {
     _$marchIncomeTotalAtom.reportWrite(value, super.marchIncomeTotal, () {
       super.marchIncomeTotal = value;
     });
@@ -224,13 +224,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.marchSavingsTotal', context: context);
 
   @override
-  int get marchSavingsTotal {
+  double get marchSavingsTotal {
     _$marchSavingsTotalAtom.reportRead();
     return super.marchSavingsTotal;
   }
 
   @override
-  set marchSavingsTotal(int value) {
+  set marchSavingsTotal(double value) {
     _$marchSavingsTotalAtom.reportWrite(value, super.marchSavingsTotal, () {
       super.marchSavingsTotal = value;
     });
@@ -240,13 +240,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.marchStuffsTotal', context: context);
 
   @override
-  int get marchStuffsTotal {
+  double get marchStuffsTotal {
     _$marchStuffsTotalAtom.reportRead();
     return super.marchStuffsTotal;
   }
 
   @override
-  set marchStuffsTotal(int value) {
+  set marchStuffsTotal(double value) {
     _$marchStuffsTotalAtom.reportWrite(value, super.marchStuffsTotal, () {
       super.marchStuffsTotal = value;
     });
@@ -272,13 +272,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.aprilExpensesTotal', context: context);
 
   @override
-  int get aprilExpensesTotal {
+  double get aprilExpensesTotal {
     _$aprilExpensesTotalAtom.reportRead();
     return super.aprilExpensesTotal;
   }
 
   @override
-  set aprilExpensesTotal(int value) {
+  set aprilExpensesTotal(double value) {
     _$aprilExpensesTotalAtom.reportWrite(value, super.aprilExpensesTotal, () {
       super.aprilExpensesTotal = value;
     });
@@ -288,13 +288,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.aprilIncomeTotal', context: context);
 
   @override
-  int get aprilIncomeTotal {
+  double get aprilIncomeTotal {
     _$aprilIncomeTotalAtom.reportRead();
     return super.aprilIncomeTotal;
   }
 
   @override
-  set aprilIncomeTotal(int value) {
+  set aprilIncomeTotal(double value) {
     _$aprilIncomeTotalAtom.reportWrite(value, super.aprilIncomeTotal, () {
       super.aprilIncomeTotal = value;
     });
@@ -304,13 +304,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.aprilSavingsTotal', context: context);
 
   @override
-  int get aprilSavingsTotal {
+  double get aprilSavingsTotal {
     _$aprilSavingsTotalAtom.reportRead();
     return super.aprilSavingsTotal;
   }
 
   @override
-  set aprilSavingsTotal(int value) {
+  set aprilSavingsTotal(double value) {
     _$aprilSavingsTotalAtom.reportWrite(value, super.aprilSavingsTotal, () {
       super.aprilSavingsTotal = value;
     });
@@ -320,13 +320,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.aprilStuffsTotal', context: context);
 
   @override
-  int get aprilStuffsTotal {
+  double get aprilStuffsTotal {
     _$aprilStuffsTotalAtom.reportRead();
     return super.aprilStuffsTotal;
   }
 
   @override
-  set aprilStuffsTotal(int value) {
+  set aprilStuffsTotal(double value) {
     _$aprilStuffsTotalAtom.reportWrite(value, super.aprilStuffsTotal, () {
       super.aprilStuffsTotal = value;
     });
@@ -352,13 +352,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.mayExpensesTotal', context: context);
 
   @override
-  int get mayExpensesTotal {
+  double get mayExpensesTotal {
     _$mayExpensesTotalAtom.reportRead();
     return super.mayExpensesTotal;
   }
 
   @override
-  set mayExpensesTotal(int value) {
+  set mayExpensesTotal(double value) {
     _$mayExpensesTotalAtom.reportWrite(value, super.mayExpensesTotal, () {
       super.mayExpensesTotal = value;
     });
@@ -368,13 +368,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.mayIncomeTotal', context: context);
 
   @override
-  int get mayIncomeTotal {
+  double get mayIncomeTotal {
     _$mayIncomeTotalAtom.reportRead();
     return super.mayIncomeTotal;
   }
 
   @override
-  set mayIncomeTotal(int value) {
+  set mayIncomeTotal(double value) {
     _$mayIncomeTotalAtom.reportWrite(value, super.mayIncomeTotal, () {
       super.mayIncomeTotal = value;
     });
@@ -384,13 +384,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.maySavingsTotal', context: context);
 
   @override
-  int get maySavingsTotal {
+  double get maySavingsTotal {
     _$maySavingsTotalAtom.reportRead();
     return super.maySavingsTotal;
   }
 
   @override
-  set maySavingsTotal(int value) {
+  set maySavingsTotal(double value) {
     _$maySavingsTotalAtom.reportWrite(value, super.maySavingsTotal, () {
       super.maySavingsTotal = value;
     });
@@ -400,13 +400,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.mayStuffsTotal', context: context);
 
   @override
-  int get mayStuffsTotal {
+  double get mayStuffsTotal {
     _$mayStuffsTotalAtom.reportRead();
     return super.mayStuffsTotal;
   }
 
   @override
-  set mayStuffsTotal(int value) {
+  set mayStuffsTotal(double value) {
     _$mayStuffsTotalAtom.reportWrite(value, super.mayStuffsTotal, () {
       super.mayStuffsTotal = value;
     });
@@ -432,13 +432,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.juneExpensesTotal', context: context);
 
   @override
-  int get juneExpensesTotal {
+  double get juneExpensesTotal {
     _$juneExpensesTotalAtom.reportRead();
     return super.juneExpensesTotal;
   }
 
   @override
-  set juneExpensesTotal(int value) {
+  set juneExpensesTotal(double value) {
     _$juneExpensesTotalAtom.reportWrite(value, super.juneExpensesTotal, () {
       super.juneExpensesTotal = value;
     });
@@ -448,13 +448,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.juneIncomeTotal', context: context);
 
   @override
-  int get juneIncomeTotal {
+  double get juneIncomeTotal {
     _$juneIncomeTotalAtom.reportRead();
     return super.juneIncomeTotal;
   }
 
   @override
-  set juneIncomeTotal(int value) {
+  set juneIncomeTotal(double value) {
     _$juneIncomeTotalAtom.reportWrite(value, super.juneIncomeTotal, () {
       super.juneIncomeTotal = value;
     });
@@ -464,13 +464,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.juneSavingsTotal', context: context);
 
   @override
-  int get juneSavingsTotal {
+  double get juneSavingsTotal {
     _$juneSavingsTotalAtom.reportRead();
     return super.juneSavingsTotal;
   }
 
   @override
-  set juneSavingsTotal(int value) {
+  set juneSavingsTotal(double value) {
     _$juneSavingsTotalAtom.reportWrite(value, super.juneSavingsTotal, () {
       super.juneSavingsTotal = value;
     });
@@ -480,13 +480,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.juneStuffsTotal', context: context);
 
   @override
-  int get juneStuffsTotal {
+  double get juneStuffsTotal {
     _$juneStuffsTotalAtom.reportRead();
     return super.juneStuffsTotal;
   }
 
   @override
-  set juneStuffsTotal(int value) {
+  set juneStuffsTotal(double value) {
     _$juneStuffsTotalAtom.reportWrite(value, super.juneStuffsTotal, () {
       super.juneStuffsTotal = value;
     });
@@ -512,13 +512,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.julyExpensesTotal', context: context);
 
   @override
-  int get julyExpensesTotal {
+  double get julyExpensesTotal {
     _$julyExpensesTotalAtom.reportRead();
     return super.julyExpensesTotal;
   }
 
   @override
-  set julyExpensesTotal(int value) {
+  set julyExpensesTotal(double value) {
     _$julyExpensesTotalAtom.reportWrite(value, super.julyExpensesTotal, () {
       super.julyExpensesTotal = value;
     });
@@ -528,13 +528,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.julyIncomeTotal', context: context);
 
   @override
-  int get julyIncomeTotal {
+  double get julyIncomeTotal {
     _$julyIncomeTotalAtom.reportRead();
     return super.julyIncomeTotal;
   }
 
   @override
-  set julyIncomeTotal(int value) {
+  set julyIncomeTotal(double value) {
     _$julyIncomeTotalAtom.reportWrite(value, super.julyIncomeTotal, () {
       super.julyIncomeTotal = value;
     });
@@ -544,13 +544,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.julySavingsTotal', context: context);
 
   @override
-  int get julySavingsTotal {
+  double get julySavingsTotal {
     _$julySavingsTotalAtom.reportRead();
     return super.julySavingsTotal;
   }
 
   @override
-  set julySavingsTotal(int value) {
+  set julySavingsTotal(double value) {
     _$julySavingsTotalAtom.reportWrite(value, super.julySavingsTotal, () {
       super.julySavingsTotal = value;
     });
@@ -560,13 +560,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.julyStuffsTotal', context: context);
 
   @override
-  int get julyStuffsTotal {
+  double get julyStuffsTotal {
     _$julyStuffsTotalAtom.reportRead();
     return super.julyStuffsTotal;
   }
 
   @override
-  set julyStuffsTotal(int value) {
+  set julyStuffsTotal(double value) {
     _$julyStuffsTotalAtom.reportWrite(value, super.julyStuffsTotal, () {
       super.julyStuffsTotal = value;
     });
@@ -592,13 +592,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.augustExpensesTotal', context: context);
 
   @override
-  int get augustExpensesTotal {
+  double get augustExpensesTotal {
     _$augustExpensesTotalAtom.reportRead();
     return super.augustExpensesTotal;
   }
 
   @override
-  set augustExpensesTotal(int value) {
+  set augustExpensesTotal(double value) {
     _$augustExpensesTotalAtom.reportWrite(value, super.augustExpensesTotal, () {
       super.augustExpensesTotal = value;
     });
@@ -608,13 +608,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.augustIncomeTotal', context: context);
 
   @override
-  int get augustIncomeTotal {
+  double get augustIncomeTotal {
     _$augustIncomeTotalAtom.reportRead();
     return super.augustIncomeTotal;
   }
 
   @override
-  set augustIncomeTotal(int value) {
+  set augustIncomeTotal(double value) {
     _$augustIncomeTotalAtom.reportWrite(value, super.augustIncomeTotal, () {
       super.augustIncomeTotal = value;
     });
@@ -624,13 +624,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.augustSavingsTotal', context: context);
 
   @override
-  int get augustSavingsTotal {
+  double get augustSavingsTotal {
     _$augustSavingsTotalAtom.reportRead();
     return super.augustSavingsTotal;
   }
 
   @override
-  set augustSavingsTotal(int value) {
+  set augustSavingsTotal(double value) {
     _$augustSavingsTotalAtom.reportWrite(value, super.augustSavingsTotal, () {
       super.augustSavingsTotal = value;
     });
@@ -640,13 +640,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.augustStuffsTotal', context: context);
 
   @override
-  int get augustStuffsTotal {
+  double get augustStuffsTotal {
     _$augustStuffsTotalAtom.reportRead();
     return super.augustStuffsTotal;
   }
 
   @override
-  set augustStuffsTotal(int value) {
+  set augustStuffsTotal(double value) {
     _$augustStuffsTotalAtom.reportWrite(value, super.augustStuffsTotal, () {
       super.augustStuffsTotal = value;
     });
@@ -672,13 +672,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.septemberExpensesTotal', context: context);
 
   @override
-  int get septemberExpensesTotal {
+  double get septemberExpensesTotal {
     _$septemberExpensesTotalAtom.reportRead();
     return super.septemberExpensesTotal;
   }
 
   @override
-  set septemberExpensesTotal(int value) {
+  set septemberExpensesTotal(double value) {
     _$septemberExpensesTotalAtom
         .reportWrite(value, super.septemberExpensesTotal, () {
       super.septemberExpensesTotal = value;
@@ -689,13 +689,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.septemberIncomeTotal', context: context);
 
   @override
-  int get septemberIncomeTotal {
+  double get septemberIncomeTotal {
     _$septemberIncomeTotalAtom.reportRead();
     return super.septemberIncomeTotal;
   }
 
   @override
-  set septemberIncomeTotal(int value) {
+  set septemberIncomeTotal(double value) {
     _$septemberIncomeTotalAtom.reportWrite(value, super.septemberIncomeTotal,
         () {
       super.septemberIncomeTotal = value;
@@ -706,13 +706,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.septemberSavingsTotal', context: context);
 
   @override
-  int get septemberSavingsTotal {
+  double get septemberSavingsTotal {
     _$septemberSavingsTotalAtom.reportRead();
     return super.septemberSavingsTotal;
   }
 
   @override
-  set septemberSavingsTotal(int value) {
+  set septemberSavingsTotal(double value) {
     _$septemberSavingsTotalAtom.reportWrite(value, super.septemberSavingsTotal,
         () {
       super.septemberSavingsTotal = value;
@@ -723,13 +723,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.septemberStuffsTotal', context: context);
 
   @override
-  int get septemberStuffsTotal {
+  double get septemberStuffsTotal {
     _$septemberStuffsTotalAtom.reportRead();
     return super.septemberStuffsTotal;
   }
 
   @override
-  set septemberStuffsTotal(int value) {
+  set septemberStuffsTotal(double value) {
     _$septemberStuffsTotalAtom.reportWrite(value, super.septemberStuffsTotal,
         () {
       super.septemberStuffsTotal = value;
@@ -756,13 +756,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.octoberExpensesTotal', context: context);
 
   @override
-  int get octoberExpensesTotal {
+  double get octoberExpensesTotal {
     _$octoberExpensesTotalAtom.reportRead();
     return super.octoberExpensesTotal;
   }
 
   @override
-  set octoberExpensesTotal(int value) {
+  set octoberExpensesTotal(double value) {
     _$octoberExpensesTotalAtom.reportWrite(value, super.octoberExpensesTotal,
         () {
       super.octoberExpensesTotal = value;
@@ -773,13 +773,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.octoberIncomeTotal', context: context);
 
   @override
-  int get octoberIncomeTotal {
+  double get octoberIncomeTotal {
     _$octoberIncomeTotalAtom.reportRead();
     return super.octoberIncomeTotal;
   }
 
   @override
-  set octoberIncomeTotal(int value) {
+  set octoberIncomeTotal(double value) {
     _$octoberIncomeTotalAtom.reportWrite(value, super.octoberIncomeTotal, () {
       super.octoberIncomeTotal = value;
     });
@@ -789,13 +789,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.octoberSavingsTotal', context: context);
 
   @override
-  int get octoberSavingsTotal {
+  double get octoberSavingsTotal {
     _$octoberSavingsTotalAtom.reportRead();
     return super.octoberSavingsTotal;
   }
 
   @override
-  set octoberSavingsTotal(int value) {
+  set octoberSavingsTotal(double value) {
     _$octoberSavingsTotalAtom.reportWrite(value, super.octoberSavingsTotal, () {
       super.octoberSavingsTotal = value;
     });
@@ -805,13 +805,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.octoberStuffsTotal', context: context);
 
   @override
-  int get octoberStuffsTotal {
+  double get octoberStuffsTotal {
     _$octoberStuffsTotalAtom.reportRead();
     return super.octoberStuffsTotal;
   }
 
   @override
-  set octoberStuffsTotal(int value) {
+  set octoberStuffsTotal(double value) {
     _$octoberStuffsTotalAtom.reportWrite(value, super.octoberStuffsTotal, () {
       super.octoberStuffsTotal = value;
     });
@@ -837,13 +837,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.novemberExpensesTotal', context: context);
 
   @override
-  int get novemberExpensesTotal {
+  double get novemberExpensesTotal {
     _$novemberExpensesTotalAtom.reportRead();
     return super.novemberExpensesTotal;
   }
 
   @override
-  set novemberExpensesTotal(int value) {
+  set novemberExpensesTotal(double value) {
     _$novemberExpensesTotalAtom.reportWrite(value, super.novemberExpensesTotal,
         () {
       super.novemberExpensesTotal = value;
@@ -854,13 +854,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.novemberIncomeTotal', context: context);
 
   @override
-  int get novemberIncomeTotal {
+  double get novemberIncomeTotal {
     _$novemberIncomeTotalAtom.reportRead();
     return super.novemberIncomeTotal;
   }
 
   @override
-  set novemberIncomeTotal(int value) {
+  set novemberIncomeTotal(double value) {
     _$novemberIncomeTotalAtom.reportWrite(value, super.novemberIncomeTotal, () {
       super.novemberIncomeTotal = value;
     });
@@ -870,13 +870,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.novemberSavingsTotal', context: context);
 
   @override
-  int get novemberSavingsTotal {
+  double get novemberSavingsTotal {
     _$novemberSavingsTotalAtom.reportRead();
     return super.novemberSavingsTotal;
   }
 
   @override
-  set novemberSavingsTotal(int value) {
+  set novemberSavingsTotal(double value) {
     _$novemberSavingsTotalAtom.reportWrite(value, super.novemberSavingsTotal,
         () {
       super.novemberSavingsTotal = value;
@@ -887,13 +887,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.novemberStuffsTotal', context: context);
 
   @override
-  int get novemberStuffsTotal {
+  double get novemberStuffsTotal {
     _$novemberStuffsTotalAtom.reportRead();
     return super.novemberStuffsTotal;
   }
 
   @override
-  set novemberStuffsTotal(int value) {
+  set novemberStuffsTotal(double value) {
     _$novemberStuffsTotalAtom.reportWrite(value, super.novemberStuffsTotal, () {
       super.novemberStuffsTotal = value;
     });
@@ -919,13 +919,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.decemberExpensesTotal', context: context);
 
   @override
-  int get decemberExpensesTotal {
+  double get decemberExpensesTotal {
     _$decemberExpensesTotalAtom.reportRead();
     return super.decemberExpensesTotal;
   }
 
   @override
-  set decemberExpensesTotal(int value) {
+  set decemberExpensesTotal(double value) {
     _$decemberExpensesTotalAtom.reportWrite(value, super.decemberExpensesTotal,
         () {
       super.decemberExpensesTotal = value;
@@ -936,13 +936,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.decemberIncomeTotal', context: context);
 
   @override
-  int get decemberIncomeTotal {
+  double get decemberIncomeTotal {
     _$decemberIncomeTotalAtom.reportRead();
     return super.decemberIncomeTotal;
   }
 
   @override
-  set decemberIncomeTotal(int value) {
+  set decemberIncomeTotal(double value) {
     _$decemberIncomeTotalAtom.reportWrite(value, super.decemberIncomeTotal, () {
       super.decemberIncomeTotal = value;
     });
@@ -952,13 +952,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.decemberSavingsTotal', context: context);
 
   @override
-  int get decemberSavingsTotal {
+  double get decemberSavingsTotal {
     _$decemberSavingsTotalAtom.reportRead();
     return super.decemberSavingsTotal;
   }
 
   @override
-  set decemberSavingsTotal(int value) {
+  set decemberSavingsTotal(double value) {
     _$decemberSavingsTotalAtom.reportWrite(value, super.decemberSavingsTotal,
         () {
       super.decemberSavingsTotal = value;
@@ -969,13 +969,13 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
       Atom(name: '_HomeViewModelBase.decemberStuffsTotal', context: context);
 
   @override
-  int get decemberStuffsTotal {
+  double get decemberStuffsTotal {
     _$decemberStuffsTotalAtom.reportRead();
     return super.decemberStuffsTotal;
   }
 
   @override
-  set decemberStuffsTotal(int value) {
+  set decemberStuffsTotal(double value) {
     _$decemberStuffsTotalAtom.reportWrite(value, super.decemberStuffsTotal, () {
       super.decemberStuffsTotal = value;
     });
@@ -996,8 +996,8 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
   }
 
   @override
-  void addToCategoryByMonth(InputModel inputModel, int income, int expenses,
-      int savings, int stuffs) {
+  void addToCategoryByMonth(InputModel inputModel, double income,
+      double expenses, double savings, double stuffs) {
     final _$actionInfo = _$_HomeViewModelBaseActionController.startAction(
         name: '_HomeViewModelBase.addToCategoryByMonth');
     try {
@@ -1014,17 +1014,6 @@ mixin _$HomeViewModel on _HomeViewModelBase, Store {
         name: '_HomeViewModelBase.showSelectCategoryBottomSheet');
     try {
       return super.showSelectCategoryBottomSheet(context);
-    } finally {
-      _$_HomeViewModelBaseActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void returnThisMonth() {
-    final _$actionInfo = _$_HomeViewModelBaseActionController.startAction(
-        name: '_HomeViewModelBase.returnThisMonth');
-    try {
-      return super.returnThisMonth();
     } finally {
       _$_HomeViewModelBaseActionController.endAction(_$actionInfo);
     }

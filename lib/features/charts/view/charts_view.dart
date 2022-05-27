@@ -1,10 +1,10 @@
 import 'package:dabasirs_wallet/features/home/view_model/home_view_model.dart';
-import 'package:dabasirs_wallet/product/components/charts/deneme_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kartal/kartal.dart';
 import 'package:mobx/mobx.dart';
 import '../../../core/base/base_state.dart';
+import '../../../product/components/charts/pie_charts.dart';
 import '../../../product/model/input_model.dart';
 
 class ChartsView extends StatefulWidget {
@@ -69,18 +69,66 @@ class _ChartsViewState extends State<ChartsView>
             child: TabBarView(
           controller: tabController,
           children: [
-            const DenmeViewChart(),
-            Container(color: context.randomColor),
-            Container(color: context.randomColor),
-            Container(color: context.randomColor),
-            Container(color: context.randomColor),
-            Container(color: context.randomColor),
-            Container(color: context.randomColor),
-            Container(color: context.randomColor),
-            Container(color: context.randomColor),
-            Container(color: context.randomColor),
-            Container(color: context.randomColor),
-            Container(color: context.randomColor),
+            PieCharts(
+                monthExpensesTotal: _viewModel.januaryExpensesTotal,
+                monthIncomeTotal: _viewModel.januaryIncomeTotal,
+                monthSavingTotal: _viewModel.januarySavingsTotal,
+                monthStuffTotal: _viewModel.januaryStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.februaryExpensesTotal,
+                monthIncomeTotal: _viewModel.februaryIncomeTotal,
+                monthSavingTotal: _viewModel.februarySavingsTotal,
+                monthStuffTotal: _viewModel.februaryStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.marchExpensesTotal,
+                monthIncomeTotal: _viewModel.marchIncomeTotal,
+                monthSavingTotal: _viewModel.marchSavingsTotal,
+                monthStuffTotal: _viewModel.marchStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.aprilExpensesTotal,
+                monthIncomeTotal: _viewModel.aprilIncomeTotal,
+                monthSavingTotal: _viewModel.aprilSavingsTotal,
+                monthStuffTotal: _viewModel.aprilStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.mayExpensesTotal,
+                monthIncomeTotal: _viewModel.mayIncomeTotal,
+                monthSavingTotal: _viewModel.maySavingsTotal,
+                monthStuffTotal: _viewModel.mayStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.juneExpensesTotal,
+                monthIncomeTotal: _viewModel.juneIncomeTotal,
+                monthSavingTotal: _viewModel.juneSavingsTotal,
+                monthStuffTotal: _viewModel.juneStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.julyExpensesTotal,
+                monthIncomeTotal: _viewModel.julyIncomeTotal,
+                monthSavingTotal: _viewModel.julySavingsTotal,
+                monthStuffTotal: _viewModel.julyStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.augustExpensesTotal,
+                monthIncomeTotal: _viewModel.augustIncomeTotal,
+                monthSavingTotal: _viewModel.augustSavingsTotal,
+                monthStuffTotal: _viewModel.augustStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.septemberExpensesTotal,
+                monthIncomeTotal: _viewModel.septemberIncomeTotal,
+                monthSavingTotal: _viewModel.septemberSavingsTotal,
+                monthStuffTotal: _viewModel.septemberStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.octoberExpensesTotal,
+                monthIncomeTotal: _viewModel.octoberIncomeTotal,
+                monthSavingTotal: _viewModel.octoberSavingsTotal,
+                monthStuffTotal: _viewModel.octoberStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.novemberExpensesTotal,
+                monthIncomeTotal: _viewModel.novemberIncomeTotal,
+                monthSavingTotal: _viewModel.novemberSavingsTotal,
+                monthStuffTotal: _viewModel.novemberStuffsTotal),
+            PieCharts(
+                monthExpensesTotal: _viewModel.decemberExpensesTotal,
+                monthIncomeTotal: _viewModel.decemberIncomeTotal,
+                monthSavingTotal: _viewModel.decemberSavingsTotal,
+                monthStuffTotal: _viewModel.decemberStuffsTotal),
           ],
         )),
       ],

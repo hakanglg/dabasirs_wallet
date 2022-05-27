@@ -1,5 +1,4 @@
 import 'package:dabasirs_wallet/product/components/bottom_sheet/select_category_bottom_sheet.dart';
-import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import '../../../core/constants/enums/category_enum.dart';
@@ -30,147 +29,147 @@ abstract class _HomeViewModelBase with Store {
   @observable
   ObservableList<InputModel> januaryList = ObservableList<InputModel>();
   @observable
-  int januaryExpensesTotal = 0;
+  double januaryExpensesTotal = 0;
   @observable
-  int januaryIncomeTotal = 0;
+  double januaryIncomeTotal = 0;
   @observable
-  int januarySavingsTotal = 0;
+  double januarySavingsTotal = 0;
   @observable
-  int januaryStuffsTotal = 0;
+  double januaryStuffsTotal = 0;
 
   // FEBRUARY
   @observable
   ObservableList<InputModel> februaryList = ObservableList<InputModel>();
   @observable
-  int februaryExpensesTotal = 0;
+  double februaryExpensesTotal = 0;
   @observable
-  int februaryIncomeTotal = 0;
+  double februaryIncomeTotal = 0;
   @observable
-  int februarySavingsTotal = 0;
+  double februarySavingsTotal = 0;
   @observable
-  int februaryStuffsTotal = 0;
+  double februaryStuffsTotal = 0;
 
   // MARCH
   @observable
   ObservableList<InputModel> marchList = ObservableList<InputModel>();
   @observable
-  int marchExpensesTotal = 0;
+  double marchExpensesTotal = 0;
   @observable
-  int marchIncomeTotal = 0;
+  double marchIncomeTotal = 0;
   @observable
-  int marchSavingsTotal = 0;
+  double marchSavingsTotal = 0;
   @observable
-  int marchStuffsTotal = 0;
+  double marchStuffsTotal = 0;
 
   // APRIL
   @observable
   ObservableList<InputModel> aprilList = ObservableList<InputModel>();
   @observable
-  int aprilExpensesTotal = 0;
+  double aprilExpensesTotal = 0;
   @observable
-  int aprilIncomeTotal = 0;
+  double aprilIncomeTotal = 0;
   @observable
-  int aprilSavingsTotal = 0;
+  double aprilSavingsTotal = 0;
   @observable
-  int aprilStuffsTotal = 0;
+  double aprilStuffsTotal = 0;
 
   // MAY
   @observable
   ObservableList<InputModel> mayList = ObservableList<InputModel>();
 
   @observable
-  int mayExpensesTotal = 0;
+  double mayExpensesTotal = 2000;
   @observable
-  int mayIncomeTotal = 0;
+  double mayIncomeTotal = 10000;
   @observable
-  int maySavingsTotal = 0;
+  double maySavingsTotal = 1000;
   @observable
-  int mayStuffsTotal = 0;
+  double mayStuffsTotal = 1000;
 
   // JUNE
   @observable
   ObservableList<InputModel> juneList = ObservableList<InputModel>();
 
   @observable
-  int juneExpensesTotal = 0;
+  double juneExpensesTotal = 0;
   @observable
-  int juneIncomeTotal = 0;
+  double juneIncomeTotal = 0;
   @observable
-  int juneSavingsTotal = 0;
+  double juneSavingsTotal = 0;
   @observable
-  int juneStuffsTotal = 0;
+  double juneStuffsTotal = 0;
 
   // JULY
   @observable
   ObservableList<InputModel> julyList = ObservableList<InputModel>();
   @observable
-  int julyExpensesTotal = 0;
+  double julyExpensesTotal = 0;
   @observable
-  int julyIncomeTotal = 0;
+  double julyIncomeTotal = 0;
   @observable
-  int julySavingsTotal = 0;
+  double julySavingsTotal = 0;
   @observable
-  int julyStuffsTotal = 0;
+  double julyStuffsTotal = 0;
   @observable
 
   // AUGUST
   ObservableList<InputModel> augustList = ObservableList<InputModel>();
   @observable
-  int augustExpensesTotal = 0;
+  double augustExpensesTotal = 20;
   @observable
-  int augustIncomeTotal = 0;
+  double augustIncomeTotal = 50;
   @observable
-  int augustSavingsTotal = 0;
+  double augustSavingsTotal = 20;
   @observable
-  int augustStuffsTotal = 0;
+  double augustStuffsTotal = 10;
 
   // SEPTEMBER
   @observable
   ObservableList<InputModel> septemberList = ObservableList<InputModel>();
   @observable
-  int septemberExpensesTotal = 0;
+  double septemberExpensesTotal = 2000;
   @observable
-  int septemberIncomeTotal = 0;
+  double septemberIncomeTotal = 10000;
   @observable
-  int septemberSavingsTotal = 0;
+  double septemberSavingsTotal = 2000;
   @observable
-  int septemberStuffsTotal = 0;
+  double septemberStuffsTotal = 1000;
 
   // OCTOBER
   @observable
   ObservableList<InputModel> octoberList = ObservableList<InputModel>();
   @observable
-  int octoberExpensesTotal = 0;
+  double octoberExpensesTotal = 0;
   @observable
-  int octoberIncomeTotal = 0;
+  double octoberIncomeTotal = 0;
   @observable
-  int octoberSavingsTotal = 0;
+  double octoberSavingsTotal = 0;
   @observable
-  int octoberStuffsTotal = 0;
+  double octoberStuffsTotal = 0;
 
   // NOVEMBER
   @observable
   ObservableList<InputModel> novemberList = ObservableList<InputModel>();
   @observable
-  int novemberExpensesTotal = 0;
+  double novemberExpensesTotal = 0;
   @observable
-  int novemberIncomeTotal = 0;
+  double novemberIncomeTotal = 0;
   @observable
-  int novemberSavingsTotal = 0;
+  double novemberSavingsTotal = 0;
   @observable
-  int novemberStuffsTotal = 0;
+  double novemberStuffsTotal = 0;
 
   // DECEMBER
   @observable
   ObservableList<InputModel> decemberList = ObservableList<InputModel>();
   @observable
-  int decemberExpensesTotal = 0;
+  double decemberExpensesTotal = 0;
   @observable
-  int decemberIncomeTotal = 0;
+  double decemberIncomeTotal = 0;
   @observable
-  int decemberSavingsTotal = 0;
+  double decemberSavingsTotal = 0;
   @observable
-  int decemberStuffsTotal = 0;
+  double decemberStuffsTotal = 0;
 
   @action
   void addInputList(InputModel inputModel) {
@@ -247,8 +246,8 @@ abstract class _HomeViewModelBase with Store {
   }
 
   @action
-  void addToCategoryByMonth(InputModel inputModel, int income, int expenses,
-      int savings, int stuffs) {
+  void addToCategoryByMonth(InputModel inputModel, double income,
+      double expenses, double savings, double stuffs) {
     switch (inputModel.category) {
       case Category.Income:
         income += inputModel.price;
@@ -271,12 +270,12 @@ abstract class _HomeViewModelBase with Store {
         context: context, builder: (context) => SelectCategoryBottomSheet());
   }
 
-  @action
-  void returnThisMonth() {
-    var month = DateTime.now();
-    final formatted = formatDate(month, [mm]); // Current month index
+  // @action
+  // void returnThisMonth() {
+  //   var month = DateTime.now();
+  //   final formatted = formatDate(month, [mm]); // Current month index
 
-    print(months[int.parse(formatted) - 1]); // Current month name
-    print(formatDate(DateTime.now(), [dd, '-', mm, '-', yyyy])); // Current date
-  }
+  //   print(months[double.parse(formatted) - 1]); // Current month name
+  //   print(formatDate(DateTime.now(), [dd, '-', mm, '-', yyyy])); // Current date
+  // }
 }
