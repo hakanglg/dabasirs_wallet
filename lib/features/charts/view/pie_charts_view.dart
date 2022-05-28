@@ -31,11 +31,17 @@ class PieChartsView extends StatelessWidget with BaseState {
   @override
   Widget build(BuildContext context) {
     List<ChartData> chartData = [
-      ChartData(Category.Income.name, monthIncomeTotal,
+      ChartData(
+          Category.Income.name,
+          monthIncomeTotal == 0 ? 10 : monthIncomeTotal,
           ColorConstants.instance.caribbienGreen),
-      ChartData(Category.Expenses.name, monthExpensesTotal,
+      ChartData(
+          Category.Expenses.name,
+          monthExpensesTotal == 0 ? 8 : monthExpensesTotal,
           ColorConstants.instance.metroidRed),
-      ChartData(Category.Savings.name, monthSavingTotal,
+      ChartData(
+          Category.Savings.name,
+          monthSavingTotal == 0 ? 2 : monthSavingTotal,
           ColorConstants.instance.shadyNeonBlue),
     ];
 
@@ -73,8 +79,10 @@ class PieChartsView extends StatelessWidget with BaseState {
     return SfCircularChart(
         tooltipBehavior: TooltipBehavior(enable: true),
         series: <DoughnutSeries>[
+        
           // Render pie chart
           DoughnutSeries<ChartData, String>(
+            
               enableTooltip: true,
               animationDuration: animationDuration,
               dataLabelMapper: (datum, index) => datum.x,

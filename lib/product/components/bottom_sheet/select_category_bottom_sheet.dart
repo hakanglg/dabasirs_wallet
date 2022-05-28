@@ -17,6 +17,7 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       resizeToAvoidBottomInset: false,
       body: MyColumn(
           child: MyRow(
@@ -98,20 +99,6 @@ class SelectCategoryBottomSheet extends StatelessWidget with BaseState {
                           title: titleController.text,
                           price: int.parse(priceController.text),
                           category: Category.Savings,
-                          createdTime: DateTime.now()));
-                    },
-                  ),
-                ),
-                context.emptySizedWidthBoxNormal,
-                Expanded(
-                  child: AddSquare(
-                    category: Category.Stuffs.name,
-                    color: colorConstants.blueAngelsYellow,
-                    onTap: () {
-                      _viewModel.addInputList(InputModel(
-                          title: titleController.text,
-                          price: int.parse(priceController.text),
-                          category: Category.Stuffs,
                           createdTime: DateTime.now()));
                     },
                   ),

@@ -8,12 +8,23 @@ ThemeData myTheme = ThemeData(
     useMaterial3: true,
     scaffoldBackgroundColor: ColorConstants.instance.blueExult,
     fontFamily: "Poppins",
+
+    // FAB
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       shape: const StadiumBorder(),
       backgroundColor: ColorConstants.instance.white,
     ),
-    appBarTheme: const AppBarTheme(
-        centerTitle: true, elevation: 0, backgroundColor: Colors.transparent),
+
+    // APPBAR
+    appBarTheme: AppBarTheme(
+        actionsIconTheme: IconThemeData(
+          color: ColorConstants.instance.lunarDust,
+        ),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.transparent),
+
+    // TEXT
     textTheme: TextTheme(
         headline5: TextStyle(
           color: ColorConstants.instance.white,
@@ -28,6 +39,8 @@ ThemeData myTheme = ThemeData(
             color: ColorConstants.instance.white,
             fontWeight: FontWeight.w300,
             fontSize: 12.sp)),
+
+    // INPUT DECORATİON
     inputDecorationTheme: InputDecorationTheme(
         floatingLabelAlignment: FloatingLabelAlignment.center,
         labelStyle: TextStyle(
@@ -39,15 +52,17 @@ ThemeData myTheme = ThemeData(
         filled: true,
         border: OutlineInputBorder(
             borderRadius: BorderConstants.instance.radiusAllLow)),
-    // bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    //   backgroundColor: ColorConstants.instance.white,
 
-    // ),
+    // ICON
     iconTheme: IconThemeData(color: ColorConstants.instance.white),
+
+    // BOTTOM APPBAR
     bottomAppBarTheme: BottomAppBarTheme(
       shape: const CircularNotchedRectangle(),
       color: ColorConstants.instance.shadyNeonBlue,
     ),
+
+    // TABBAR
     tabBarTheme: TabBarTheme(
         // indicator: BoxDecoration(
         //   color: ColorConstants.instance.shadyNeonBlue,

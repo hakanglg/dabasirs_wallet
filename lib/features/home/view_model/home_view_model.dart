@@ -1,3 +1,4 @@
+import 'package:dabasirs_wallet/core/base/base_state.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 
@@ -7,15 +8,18 @@ part 'home_view_model.g.dart';
 
 class HomeViewModel = _HomeViewModelBase with _$HomeViewModel;
 
-abstract class _HomeViewModelBase with Store {
-  
+abstract class _HomeViewModelBase with Store, BaseState {
   // JANUARY
-
 
   @action
   void showSelectCategoryBottomSheet(BuildContext context) {
     showModalBottomSheet(
-        context: context, builder: (context) => SelectCategoryBottomSheet());
+        backgroundColor: colorConstants.blueExult,
+        shape: RoundedRectangleBorder(
+            // <-- SEE HERE
+            borderRadius: borderConstants.radiusTopHigh),
+        context: context,
+        builder: (context) => SelectCategoryBottomSheet());
   }
 
   // @action

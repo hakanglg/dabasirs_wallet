@@ -1,3 +1,6 @@
+import 'package:dabasirs_wallet/features/profile/view/profile_view.dart';
+import 'package:dabasirs_wallet/product/components/fab/add_input_fab.dart';
+
 import '../../../core/base/base_state.dart';
 import '../view_model/home_view_model.dart';
 import '../../months/view/months_view..dart';
@@ -18,23 +21,18 @@ class HomeView extends StatelessWidget with BaseState, NavigatorManager {
         child: Scaffold(
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
-          floatingActionButton: FloatingActionButton(
-            onPressed: () => _viewModel.showSelectCategoryBottomSheet(context),
-            child: Icon(
-              Icons.add,
-              color: colorConstants.black,
-            ),
-          ),
+          floatingActionButton: AddInputFAB(),
           appBar: AppBar(
             title: AppBarTitleRichText(),
+            actions: [
+              IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
+            ],
           ),
-          body: const TabBarView(
-            physics: NeverScrollableScrollPhysics(),
+          body: TabBarView(
+            physics: const NeverScrollableScrollPhysics(),
             children: [
-              MonthsView(),
-              Center(
-                child: Text("Profile"),
-              ),
+              const MonthsView(),
+              ProfileView(),
             ],
           ),
           bottomNavigationBar: BottomAppBar(
