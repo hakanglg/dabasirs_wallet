@@ -1,4 +1,5 @@
 import 'package:dabasirs_wallet/product/components/list_tile/income_list_tile.dart';
+import 'package:mobx/mobx.dart';
 
 import '../../../../core/base/base_state.dart';
 import '../../../../core/constants/color/color_constants.dart';
@@ -11,17 +12,20 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import '../../../../core/constants/enums/category_enum.dart';
 import '../../../product/components/list_tile/expenses_list_tile.dart';
 import '../../../product/components/list_tile/saving_list_tile.dart';
+import '../../transactions/view/tranactions_view.dart';
 
 part "../view_model/pie_charts_view_model.dart";
 
 class PieChartsView extends StatelessWidget with BaseState {
   final double monthIncomeTotal, monthExpensesTotal, monthSavingTotal;
+  final ObservableList mounth;
 
   PieChartsView({
     Key? key,
     required this.monthIncomeTotal,
     required this.monthExpensesTotal,
     required this.monthSavingTotal,
+    required this.mounth,
   }) : super(key: key);
 
   final _PieChartsViewModel _viewModel = _PieChartsViewModel();
@@ -48,15 +52,26 @@ class PieChartsView extends StatelessWidget with BaseState {
     return Column(
       children: [
         _PieChart(context, chartData),
-        IncomePercentListTile(
-            percents: _viewModel
-                .findPercent(
-                  monthIncomeTotal,
-                  monthExpensesTotal,
-                  monthSavingTotal,
-                  monthIncomeTotal,
-                )
-                .toInt()),
+        InkWell(
+          // onTap: () {
+          //   Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //           builder: (context) => TransactionsView(
+          //                 context: context,
+          //                 mounthIndex: mounth,
+          //               )));
+          // },
+          child: IncomePercentListTile(
+              percents: _viewModel
+                  .findPercent(
+                    monthIncomeTotal,
+                    monthExpensesTotal,
+                    monthSavingTotal,
+                    monthIncomeTotal,
+                  )
+                  .toInt()),
+        ),
         ExpensesPercentListTile(
             percents: _viewModel
                 .findPercent(
@@ -71,6 +86,30 @@ class PieChartsView extends StatelessWidget with BaseState {
                 .findPercent(monthSavingTotal, monthExpensesTotal,
                     monthSavingTotal, monthIncomeTotal)
                 .toInt()),
+        context.emptySizedHeightBoxLow,
+        TextButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                side: BorderSide(
+                  color: ColorConstants.instance.white,
+                  width: 2,
+                ),
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          TransactionsView(context: context, mounth: mounth)));
+            },
+            child: Text(
+              "Go to Transactions",
+              style: TextStyle(
+                color: colorConstants.white,
+              ),
+            )),
       ],
     );
   }
@@ -79,10 +118,8 @@ class PieChartsView extends StatelessWidget with BaseState {
     return SfCircularChart(
         tooltipBehavior: TooltipBehavior(enable: true),
         series: <DoughnutSeries>[
-        
           // Render pie chart
           DoughnutSeries<ChartData, String>(
-            
               enableTooltip: true,
               animationDuration: animationDuration,
               dataLabelMapper: (datum, index) => datum.x,

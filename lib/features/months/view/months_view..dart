@@ -76,61 +76,73 @@ class _MonthsViewState extends State<MonthsView>
           controller: tabController,
           children: [
             PieChartsView(
+              mounth: _viewModel.januaryList,
               monthExpensesTotal: _viewModel.januaryExpensesTotal,
               monthIncomeTotal: _viewModel.januaryIncomeTotal,
               monthSavingTotal: _viewModel.januarySavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.februaryList,
               monthExpensesTotal: _viewModel.februaryExpensesTotal,
               monthIncomeTotal: _viewModel.februaryIncomeTotal,
               monthSavingTotal: _viewModel.februarySavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.marchList,
               monthExpensesTotal: _viewModel.marchExpensesTotal,
               monthIncomeTotal: _viewModel.marchIncomeTotal,
               monthSavingTotal: _viewModel.marchSavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.aprilList,
               monthExpensesTotal: _viewModel.aprilExpensesTotal,
               monthIncomeTotal: _viewModel.aprilIncomeTotal,
               monthSavingTotal: _viewModel.aprilSavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.mayList,
               monthExpensesTotal: _viewModel.mayExpensesTotal,
               monthIncomeTotal: _viewModel.mayIncomeTotal,
               monthSavingTotal: _viewModel.maySavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.juneList,
               monthExpensesTotal: _viewModel.juneExpensesTotal,
               monthIncomeTotal: _viewModel.juneIncomeTotal,
               monthSavingTotal: _viewModel.juneSavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.julyList,
               monthExpensesTotal: _viewModel.julyExpensesTotal,
               monthIncomeTotal: _viewModel.julyIncomeTotal,
               monthSavingTotal: _viewModel.julySavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.augustList,
               monthExpensesTotal: _viewModel.augustExpensesTotal,
               monthIncomeTotal: _viewModel.augustIncomeTotal,
               monthSavingTotal: _viewModel.augustSavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.septemberList,
               monthExpensesTotal: _viewModel.septemberExpensesTotal,
               monthIncomeTotal: _viewModel.septemberIncomeTotal,
               monthSavingTotal: _viewModel.septemberSavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.octoberList,
               monthExpensesTotal: _viewModel.octoberExpensesTotal,
               monthIncomeTotal: _viewModel.octoberIncomeTotal,
               monthSavingTotal: _viewModel.octoberSavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.novemberList,
               monthExpensesTotal: _viewModel.novemberExpensesTotal,
               monthIncomeTotal: _viewModel.novemberIncomeTotal,
               monthSavingTotal: _viewModel.novemberSavingsTotal,
             ),
             PieChartsView(
+              mounth: _viewModel.decemberList,
               monthExpensesTotal: _viewModel.decemberExpensesTotal,
               monthIncomeTotal: _viewModel.decemberIncomeTotal,
               monthSavingTotal: _viewModel.decemberSavingsTotal,

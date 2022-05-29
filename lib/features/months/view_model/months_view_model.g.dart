@@ -9,6 +9,54 @@ part of 'months_view_model.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
+  late final _$incomeTotalAtom =
+      Atom(name: '_MonthsViewModelBase.incomeTotal', context: context);
+
+  @override
+  double get incomeTotal {
+    _$incomeTotalAtom.reportRead();
+    return super.incomeTotal;
+  }
+
+  @override
+  set incomeTotal(double value) {
+    _$incomeTotalAtom.reportWrite(value, super.incomeTotal, () {
+      super.incomeTotal = value;
+    });
+  }
+
+  late final _$expensesTotalAtom =
+      Atom(name: '_MonthsViewModelBase.expensesTotal', context: context);
+
+  @override
+  double get expensesTotal {
+    _$expensesTotalAtom.reportRead();
+    return super.expensesTotal;
+  }
+
+  @override
+  set expensesTotal(double value) {
+    _$expensesTotalAtom.reportWrite(value, super.expensesTotal, () {
+      super.expensesTotal = value;
+    });
+  }
+
+  late final _$savingsTotalAtom =
+      Atom(name: '_MonthsViewModelBase.savingsTotal', context: context);
+
+  @override
+  double get savingsTotal {
+    _$savingsTotalAtom.reportRead();
+    return super.savingsTotal;
+  }
+
+  @override
+  set savingsTotal(double value) {
+    _$savingsTotalAtom.reportWrite(value, super.savingsTotal, () {
+      super.savingsTotal = value;
+    });
+  }
+
   late final _$januaryListAtom =
       Atom(name: '_MonthsViewModelBase.januaryList', context: context);
 
@@ -828,6 +876,9 @@ mixin _$MonthsViewModel on _MonthsViewModelBase, Store {
   @override
   String toString() {
     return '''
+incomeTotal: ${incomeTotal},
+expensesTotal: ${expensesTotal},
+savingsTotal: ${savingsTotal},
 januaryList: ${januaryList},
 januaryExpensesTotal: ${januaryExpensesTotal},
 januaryIncomeTotal: ${januaryIncomeTotal},

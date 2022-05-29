@@ -8,6 +8,48 @@ class MonthsViewModel = _MonthsViewModelBase with _$MonthsViewModel;
 
 abstract class _MonthsViewModelBase with Store {
   @observable
+  late double incomeTotal = (januaryIncomeTotal +
+      februaryIncomeTotal +
+      marchIncomeTotal +
+      aprilIncomeTotal +
+      mayIncomeTotal +
+      juneIncomeTotal +
+      julyIncomeTotal +
+      augustIncomeTotal +
+      septemberIncomeTotal +
+      octoberIncomeTotal +
+      novemberIncomeTotal +
+      decemberIncomeTotal);
+
+  @observable
+  late double expensesTotal = (januaryExpensesTotal +
+      februaryExpensesTotal +
+      marchExpensesTotal +
+      aprilExpensesTotal +
+      mayExpensesTotal +
+      juneExpensesTotal +
+      julyExpensesTotal +
+      augustExpensesTotal +
+      septemberExpensesTotal +
+      octoberExpensesTotal +
+      novemberExpensesTotal +
+      decemberExpensesTotal);
+
+  @observable
+  late double savingsTotal = (januarySavingsTotal +
+      februarySavingsTotal +
+      marchSavingsTotal +
+      aprilSavingsTotal +
+      maySavingsTotal +
+      juneSavingsTotal +
+      julySavingsTotal +
+      augustSavingsTotal +
+      septemberSavingsTotal +
+      octoberSavingsTotal +
+      novemberSavingsTotal +
+      decemberSavingsTotal);
+
+  @observable
   ObservableList<InputModel> januaryList = ObservableList<InputModel>();
   @observable
   double januaryExpensesTotal = 0;
@@ -51,11 +93,11 @@ abstract class _MonthsViewModelBase with Store {
   ObservableList<InputModel> mayList = ObservableList<InputModel>();
 
   @observable
-  double mayExpensesTotal = 2000;
+  double mayExpensesTotal = 0;
   @observable
-  double mayIncomeTotal = 10000;
+  double mayIncomeTotal = 0;
   @observable
-  double maySavingsTotal = 1000;
+  double maySavingsTotal = 0;
 
   // JUNE
   @observable
@@ -82,21 +124,21 @@ abstract class _MonthsViewModelBase with Store {
   @observable
   ObservableList<InputModel> augustList = ObservableList<InputModel>();
   @observable
-  double augustExpensesTotal = 1000;
+  double augustExpensesTotal = 0;
   @observable
-  double augustIncomeTotal = 7000;
+  double augustIncomeTotal = 0;
   @observable
-  double augustSavingsTotal = 2000;
+  double augustSavingsTotal = 0;
 
   // SEPTEMBER
   @observable
   ObservableList<InputModel> septemberList = ObservableList<InputModel>();
   @observable
-  double septemberExpensesTotal = 2000;
+  double septemberExpensesTotal = 0;
   @observable
-  double septemberIncomeTotal = 10000;
+  double septemberIncomeTotal = 0;
   @observable
-  double septemberSavingsTotal = 2000;
+  double septemberSavingsTotal = 0;
 
   // OCTOBER
   @observable
