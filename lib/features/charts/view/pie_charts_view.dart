@@ -12,9 +12,9 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import '../../../../core/constants/enums/category_enum.dart';
 import '../../../product/components/list_tile/expenses_list_tile.dart';
 import '../../../product/components/list_tile/saving_list_tile.dart';
-import '../../transactions/view/tranactions_view.dart';
-
-part "../view_model/pie_charts_view_model.dart";
+import '../../../product/model/input_model.dart';
+import '../../months/view_model/months_view_model.dart';
+import '../view_model/pie_charts_view_model.dart';
 
 class PieChartsView extends StatelessWidget with BaseState {
   final double monthIncomeTotal, monthExpensesTotal, monthSavingTotal;
@@ -28,7 +28,8 @@ class PieChartsView extends StatelessWidget with BaseState {
     required this.mounth,
   }) : super(key: key);
 
-  final _PieChartsViewModel _viewModel = _PieChartsViewModel();
+  final PieChartsViewModel _viewModel = PieChartsViewModel();
+  final MonthsViewModel _denem = MonthsViewModel();
   final double animationDuration = 1000;
   final HomeViewModel viewModel = HomeViewModel();
 
@@ -52,26 +53,15 @@ class PieChartsView extends StatelessWidget with BaseState {
     return Column(
       children: [
         _PieChart(context, chartData),
-        InkWell(
-          // onTap: () {
-          //   Navigator.push(
-          //       context,
-          //       MaterialPageRoute(
-          //           builder: (context) => TransactionsView(
-          //                 context: context,
-          //                 mounthIndex: mounth,
-          //               )));
-          // },
-          child: IncomePercentListTile(
-              percents: _viewModel
-                  .findPercent(
-                    monthIncomeTotal,
-                    monthExpensesTotal,
-                    monthSavingTotal,
-                    monthIncomeTotal,
-                  )
-                  .toInt()),
-        ),
+        IncomePercentListTile(
+            percents: _viewModel
+                .findPercent(
+                  monthIncomeTotal,
+                  monthExpensesTotal,
+                  monthSavingTotal,
+                  monthIncomeTotal,
+                )
+                .toInt()),
         ExpensesPercentListTile(
             percents: _viewModel
                 .findPercent(
@@ -98,12 +88,19 @@ class PieChartsView extends StatelessWidget with BaseState {
               ),
             ),
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          TransactionsView(context: context, mounth: mounth)));
+              _denem.addInputList(InputModel(
+                  title: "titleController.text",
+                  price: 44,
+                  category: Category.Expenses,
+                  createdTime: DateTime.utc(2022, 5, 3)));
             },
+            // onPressed: () {
+            //   Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //           builder: (context) =>
+            //               TransactionsView(context: context, mounth: mounth)));
+            // },
             child: Text(
               "Go to Transactions",
               style: TextStyle(

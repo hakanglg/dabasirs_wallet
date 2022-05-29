@@ -1,3 +1,4 @@
+import 'package:dabasirs_wallet/product/components/rich_text/appbar_title_rich_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx/mobx.dart';
@@ -27,9 +28,10 @@ class _TransactionsViewState extends State<TransactionsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(title: AppBarTitleRichText()),
       body: Column(
         children: [
+          const Text("Transactions"),
           Expanded(child: Observer(
             builder: (_) {
               return ListView.builder(

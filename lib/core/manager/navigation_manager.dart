@@ -21,6 +21,9 @@ mixin NavigatorManager {
     );
   }
 
+  void navigateToBack(BuildContext context) {
+    Navigator.of(context).pop();
+  }
   // void navigateToBack(BuildContext context, Widget widget) {
   //   Navigator.of(context).push(
   //     MaterialPageRoute(

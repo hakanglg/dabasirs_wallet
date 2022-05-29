@@ -1,6 +1,11 @@
-part of "../view/pie_charts_view.dart";
+import 'package:mobx/mobx.dart';
 
-class _PieChartsViewModel {
+part 'pie_charts_view_model.g.dart';
+
+class PieChartsViewModel = _PieChartsViewModelBase with _$PieChartsViewModel;
+
+abstract class _PieChartsViewModelBase with Store {
+  @action
   double findPercent(
     double CategoryName,
     double CategoryOne,

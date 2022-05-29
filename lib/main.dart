@@ -1,10 +1,14 @@
 import 'core/init/theme/my_theme.dart';
+import 'features/charts/view_model/pie_charts_view_model.dart';
 import 'features/home/view/home_view.dart';
 import 'features/home/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+
+import 'features/months/view_model/months_view_model.dart';
+
 // todo Chartsları oluşturan atomic widget yap.
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,6 +18,12 @@ Future<void> main() async {
     providers: [
       Provider<HomeViewModel>(
         create: (context) => HomeViewModel(),
+      ),
+      Provider<MonthsViewModel>(
+        create: (context) => MonthsViewModel(),
+      ),
+      Provider<PieChartsViewModel>(
+        create: (context) => PieChartsViewModel(),
       )
     ],
     child: ScreenUtilInit(

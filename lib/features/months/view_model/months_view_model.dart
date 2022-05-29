@@ -181,6 +181,7 @@ abstract class _MonthsViewModelBase with Store {
           januaryExpensesTotal,
           januarySavingsTotal,
         );
+        print("çalışştırıldı 1");
         break;
       case DateTime.february:
         addToList(februaryList, inputModel);
@@ -190,6 +191,8 @@ abstract class _MonthsViewModelBase with Store {
           februaryExpensesTotal,
           februarySavingsTotal,
         );
+        print("çalışştırıldı2");
+
         break;
       case DateTime.march:
         addToList(marchList, inputModel);
@@ -199,6 +202,7 @@ abstract class _MonthsViewModelBase with Store {
           marchExpensesTotal,
           marchSavingsTotal,
         );
+        print("çalışştırıldı3");
         break;
       case DateTime.april:
         addToList(aprilList, inputModel);
@@ -208,6 +212,7 @@ abstract class _MonthsViewModelBase with Store {
           aprilExpensesTotal,
           aprilSavingsTotal,
         );
+        print("çalışştırıldı4");
         break;
       case DateTime.may:
         addToList(mayList, inputModel);
@@ -217,6 +222,7 @@ abstract class _MonthsViewModelBase with Store {
           mayExpensesTotal,
           maySavingsTotal,
         );
+        print("çalışştırıldı5");
         break;
       case DateTime.june:
         addToList(juneList, inputModel);
@@ -226,6 +232,7 @@ abstract class _MonthsViewModelBase with Store {
           juneExpensesTotal,
           juneSavingsTotal,
         );
+        print("çalışştırıldı6");
         break;
       case DateTime.july:
         addToList(julyList, inputModel);
