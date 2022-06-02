@@ -124,11 +124,11 @@ abstract class _MonthsViewModelBase with Store {
   @observable
   ObservableList<InputModel> augustList = ObservableList<InputModel>();
   @observable
-  double augustExpensesTotal = 0;
+  double augustExpensesTotal = 2000;
   @observable
-  double augustIncomeTotal = 0;
+  double augustIncomeTotal = 10000;
   @observable
-  double augustSavingsTotal = 0;
+  double augustSavingsTotal = 1000;
 
   // SEPTEMBER
   @observable
