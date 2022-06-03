@@ -9,7 +9,8 @@ import 'package:provider/provider.dart';
 
 import 'features/months/view_model/months_view_model.dart';
 
-// todo Chartsları oluşturan atomic widget yap.
+// todo : add the following code to the main.dart file
+// todo : show all transactions
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
