@@ -9,8 +9,12 @@ import 'package:provider/provider.dart';
 
 import 'features/months/view_model/months_view_model.dart';
 
-// todo : add the following code to the main.dart file
 // todo : show all transactions
+// todo : add name section on onboard section
+// todo : change name feature
+// todo : add onboarding
+// todo : add hive
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
