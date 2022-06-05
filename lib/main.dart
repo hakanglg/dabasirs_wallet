@@ -14,6 +14,7 @@ import 'features/months/view_model/months_view_model.dart';
 // todo : change name feature
 // todo : add onboarding
 // todo : add hive
+// todo : add dark mode
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
